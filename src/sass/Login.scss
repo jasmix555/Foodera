@@ -1,0 +1,47 @@
+@use "sass:color";
+@use "Asset" as asset;
+@use "Index" as index;
+
+.main-txt {
+  font-weight: 700;
+  font-size: 3rem;
+  position: relative;
+  width: 280px;
+  height: 39px;
+  left: 33px;
+  top: 140px;
+}
+
+.forgot {
+  padding: 30px 0;
+  text-align: center;
+  a {
+    text-decoration: underline;
+    color: index.$sub_gray;
+    font-size: 1.6rem;
+  }
+}
+
+.input {
+  position: relative;
+  width: 325px;
+  height: 319px;
+  left: 33px;
+  top: 25rem;
+
+  .field-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    #password {
+      border: solid 1px tomato;
+      &:after {
+        content: "";
+        height: 50px;
+        width: 50px;
+        float: right;
+        border: solid 1px skyblue;
+      }
+    }
+  }
+}

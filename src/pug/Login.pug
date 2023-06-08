@@ -1,0 +1,21 @@
+doctype html
+html(lang="ja")
+    head
+        include _temp_p_head
+        title Login
+        link(rel="stylesheet", href="css/Login.css")
+    body
+        section
+            .back-btn
+                a(href="Welcome.html").fa-solid.fa-angle-left
+        section
+            h1.main-txt Welcome!
+        section.input
+            .field-wrapper
+                input(type="text" name="username" placeholder="Username")#username.field
+                input(type="password" name="password" placeholder="Password")#password.field
+            .forgot
+                a(href="#") Forgot Password? 
+            .btn
+                a(href="Home.html") Login
+        include _temp_p_foot
