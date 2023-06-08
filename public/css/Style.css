@@ -340,7 +340,7 @@ body {
   height: 100%;
 }
 
-.btn {
+.btn, .btn-wrapper .btn, .btn-wrapper .btn-regist {
   width: 325px;
   height: 54.82px;
   background: #1e232c;
@@ -349,7 +349,7 @@ body {
   font-weight: 600;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.btn a {
+.btn a, .btn-wrapper .btn a, .btn-wrapper .btn-regist a {
   text-align: center;
   text-decoration: none;
   color: #f9f4f4;
@@ -373,22 +373,16 @@ body {
   padding-left: 20px;
 }
 
-.field-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 11px;
+.shdw {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.field-wrapper .password-wrapper {
-  display: flex;
+
+.mtop100 {
+  margin-top: 100px;
 }
-.field-wrapper .password-wrapper a {
-  display: block;
-  position: absolute;
-  right: 2rem;
-  font-size: 1.8rem;
-  text-decoration: none;
-  color: #6a707c;
-  margin-top: 1.6rem;
+
+.mtop60 {
+  margin-top: 60px;
 }
 
 .back-btn {
@@ -410,6 +404,31 @@ body {
   padding: 3px;
   width: 100%;
   height: 100%;
+}
+
+.logo {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  left: calc(50% - 100px);
+  border-radius: 10px;
+  border: solid 1px #141010;
+  margin-top: 184px;
+}
+
+.btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  position: relative;
+  height: 121px;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  top: 76px;
+}
+.btn-wrapper .btn-regist {
+  background: #40bfbf;
 }
 
 .main-txt {
@@ -437,13 +456,60 @@ body {
   width: 325px;
   left: 33px;
   top: 20rem;
-  border: solid 1px tomato;
 }
 
-.login-btn {
+.field-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.field-wrapper .password-wrapper {
+  display: flex;
+}
+.field-wrapper .password-wrapper a {
+  display: block;
+  position: absolute;
+  right: 2rem;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #6a707c;
+  margin-top: 1.6rem;
+}
+
+.topics-wrapper {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 100fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  width: 325px;
+  height: 458px;
+  top: 189px;
+  overflow-y: scroll;
+  background: #f9f4f4;
+  border-radius: 5px;
+  margin: 0 auto;
   margin-top: 100px;
 }
-
-.register-btn {
-  margin-top: 50px;
+.topics-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.topics-wrapper .topic-container {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+.topics-wrapper .topic-container .topics {
+  border: solid 1px tomato;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  height: 100px;
+  width: 100px;
+}
+.topics-wrapper .topic-container .topics p {
+  color: #141010;
+  margin-top: 32px;
+  font-size: 2rem;
 }

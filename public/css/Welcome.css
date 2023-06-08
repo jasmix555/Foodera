@@ -340,7 +340,7 @@ body {
   height: 100%;
 }
 
-.btn, .btn-wrapper .btn, .btn-wrapper .btn-regist {
+.btn {
   width: 325px;
   height: 54.82px;
   background: #1e232c;
@@ -349,7 +349,7 @@ body {
   font-weight: 600;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.btn a, .btn-wrapper .btn a, .btn-wrapper .btn-regist a {
+.btn a {
   text-align: center;
   text-decoration: none;
   color: #f9f4f4;
@@ -373,12 +373,24 @@ body {
   padding-left: 20px;
 }
 
+.shdw {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.mtop100 {
+  margin-top: 100px;
+}
+
+.mtop60 {
+  margin-top: 60px;
+}
+
 .back-btn {
   position: relative;
   width: 50px;
   height: 50px;
   left: 33px;
-  top: 100px;
+  top: 60px;
   border: 1px solid #d4d8df;
   border-radius: 10px;
   background: #f9f4f4;
@@ -392,30 +404,4 @@ body {
   padding: 3px;
   width: 100%;
   height: 100%;
-}
-
-.logo {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  left: calc(50% - 100px);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 10px;
-  border: solid 1px #141010;
-  margin-top: 184px;
-}
-
-.btn-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 11px;
-  position: relative;
-  height: 121px;
-  width: 100%;
-  margin: 0 auto;
-  align-items: center;
-  top: 76px;
-}
-.btn-wrapper .btn-regist {
-  background: #40bfbf;
 }

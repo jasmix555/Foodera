@@ -1,0 +1,21 @@
+doctype html
+html(lang="ja")
+    head
+        include _temp_p_head
+        title Register
+        link(rel="stylesheet", href="css/Style.css")
+    body
+        section
+            .back-btn
+              a(href="Welcome.html").fa-solid.fa-angle-left
+        section
+            h1.main-txt Let's get you started!
+        section.input
+            .field-wrapper.register-wrapper
+              input(type="text" name="username" placeholder="Username").field
+              input(type="text" name="email" placeholder="Email").field
+              input(type="password" name="password" placeholder="Password").field
+              input(type="password" name="password" placeholder="Confirm Password").field
+            .btn.mtop60
+              a(href="Login_New.html") Agree and Register
+        include _temp_p_foot
