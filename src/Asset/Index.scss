@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap");
+
+$main_clr: #40bfbf;
+$sub_clr: #78dede;
+$acnt_clr: #f29c8c;
+$white: #f9f4f4;
+$black: #141010;
+$dark: #1e232c;
+
+:root {
+  font-family: "Urbanist", sans-serif;
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
