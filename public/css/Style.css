@@ -352,7 +352,7 @@ body {
 .btn a, .btn-wrapper .btn a, .btn-wrapper .btn-regist a {
   text-align: center;
   text-decoration: none;
-  color: #f9f4f4;
+  color: #f5f5f7;
   display: block;
   margin: 0 auto;
   padding: 14px;
@@ -389,12 +389,20 @@ body {
   padding-top: 30px;
 }
 
+.ptop20 {
+  padding-top: 20px;
+}
+
 .mtop100 {
   margin-top: 100px;
 }
 
 .mtop60 {
   margin-top: 60px;
+}
+
+.mtop30 {
+  margin-top: 30px;
 }
 
 .back-btn {
@@ -405,14 +413,14 @@ body {
   top: 60px;
   border: 1px solid #d4d8df;
   border-radius: 10px;
-  background: #f9f4f4;
+  background: #f5f5f7;
 }
 .back-btn a {
   display: block;
   font-size: 4rem;
   text-decoration: none;
   text-align: center;
-  color: #141010;
+  color: #1d1d1f;
   padding: 3px;
   width: 100%;
   height: 100%;
@@ -424,7 +432,7 @@ body {
   height: 200px;
   left: calc(50% - 100px);
   border-radius: 10px;
-  border: solid 1px #141010;
+  border: solid 1px #1d1d1f;
   margin-top: 184px;
 }
 
@@ -445,10 +453,11 @@ body {
 .main-txt {
   font-weight: 700;
   font-size: 3rem;
-  text-align: center;
-  margin-right: 133px;
+  text-align: left;
   position: relative;
   top: 80px;
+  width: 100%;
+  padding-left: 33px;
 }
 
 .forgot {
@@ -497,7 +506,7 @@ body {
   height: 458px;
   top: 189px;
   overflow-y: scroll;
-  background: #f9f4f4;
+  background: #f5f5f7;
   border-radius: 5px;
   margin: 0 auto;
   margin-top: 100px;
@@ -517,13 +526,14 @@ body {
   height: 100px;
   width: 100px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background: #141010;
+  background-size: contain;
+  background-image: url(https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);
 }
 .topics-wrapper .topic-container .topics a {
   position: relative;
   top: 3.2rem;
   display: block;
-  color: #f9f4f4;
+  color: #f5f5f7;
   font-size: 2rem;
   font-weight: 600;
   text-decoration: none;
