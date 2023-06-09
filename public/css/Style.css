@@ -445,10 +445,9 @@ body {
 .main-txt {
   font-weight: 700;
   font-size: 3rem;
+  text-align: center;
+  margin-right: 133px;
   position: relative;
-  width: 280px;
-  height: 39px;
-  left: 33px;
   top: 80px;
 }
 
