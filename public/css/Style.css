@@ -347,7 +347,7 @@ body {
   font-size: 1.6rem;
   border-radius: 8px;
   font-weight: 600;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .btn a, .btn-wrapper .btn a, .btn-wrapper .btn-regist a {
   text-align: center;
@@ -375,6 +375,18 @@ body {
 
 .shdw {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ptop100 {
+  padding-top: 100px;
+}
+
+.ptop60 {
+  padding-top: 60px;
+}
+
+.ptop30 {
+  padding-top: 30px;
 }
 
 .mtop100 {
@@ -425,7 +437,6 @@ body {
   width: 100%;
   margin: 0 auto;
   align-items: center;
-  top: 76px;
 }
 .btn-wrapper .btn-regist {
   background: #40bfbf;
@@ -501,15 +512,31 @@ body {
   justify-content: center;
 }
 .topics-wrapper .topic-container .topics {
-  border: solid 1px tomato;
   border-radius: 50%;
   text-align: center;
   position: relative;
   height: 100px;
   width: 100px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #141010;
 }
-.topics-wrapper .topic-container .topics p {
-  color: #141010;
-  margin-top: 32px;
+.topics-wrapper .topic-container .topics a {
+  position: relative;
+  top: 3.2rem;
+  display: block;
+  color: #f9f4f4;
   font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip {
+  text-align: center;
+}
+.skip a {
+  display: block;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #40bfbf;
+  font-weight: 700;
 }

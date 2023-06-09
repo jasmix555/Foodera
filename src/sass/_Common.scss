@@ -16,7 +16,7 @@ body {
   font-size: 1.6rem;
   border-radius: 8px;
   font-weight: 600;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   a {
     text-align: center;
     text-decoration: none;
@@ -44,6 +44,18 @@ body {
 
 .shdw {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ptop100 {
+  padding-top: 100px;
+}
+
+.ptop60 {
+  padding-top: 60px;
+}
+
+.ptop30 {
+  padding-top: 30px;
 }
 
 .mtop100 {
