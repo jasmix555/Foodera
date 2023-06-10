@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap"); /*!
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap"); /*!
  * ress.css • v1.1.2
  * MIT License
  * github.com/filipelinhares/ress
@@ -360,6 +360,17 @@ body {
   height: 100%;
 }
 
+.skip {
+  text-align: center;
+}
+.skip a {
+  display: block;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #fd9d46;
+  font-weight: 700;
+}
+
 .field {
   box-sizing: border-box;
   width: 325px;
@@ -372,7 +383,7 @@ body {
   padding-left: 20px;
 }
 
-.shdw {
+.shdw, .user-wrapper .user-box {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -507,7 +518,7 @@ body {
 
 .topics-wrapper {
   display: grid;
-  grid-template-columns: 100fr;
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 30px;
   grid-row-gap: 30px;
@@ -519,24 +530,35 @@ body {
   display: flex;
   gap: 50px;
   justify-content: center;
+  position: relative;
 }
-.topics-wrapper .topic-container .topics {
-  border-radius: 50%;
-  text-align: center;
+.topics-wrapper .topic-container .topic-box {
   position: relative;
   height: 100px;
   width: 100px;
+  text-align: center;
+}
+.topics-wrapper .topic-container .topic-box .topics {
+  position: absolute;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
   background-size: contain;
   background-image: url(https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);
 }
-.topics-wrapper .topic-container .topics a {
+.topics-wrapper .topic-container .topic-box a {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
   position: relative;
-  top: 3.2rem;
   display: block;
   color: #f5f5f7;
   font-size: 2rem;
-  font-weight: 600;
-  text-decoration: none;
+  font-weight: 800;
+  line-height: 9rem;
+  -webkit-backdrop-filter: blur(0.2rem);
+          backdrop-filter: blur(0.2rem);
 }
 
 .counter {
@@ -547,16 +569,23 @@ body {
   top: 130px;
   width: 100%;
   padding-right: 40px;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
-.skip {
-  text-align: center;
+.user-wrapper .user-box {
+  display: flex;
+  padding: 5px 5px;
+  width: 100%;
+  height: 60px;
+  border-radius: 5px;
 }
-.skip a {
-  display: block;
-  font-size: 1.6rem;
-  text-decoration: none;
-  color: #fd9d46;
-  font-weight: 700;
+.user-wrapper .user-box .user-prof-small {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: solid 1px tomato;
+}
+.user-wrapper .user-box .user-name {
+  border: solid 1px tomato;
+  text-align: left;
 }

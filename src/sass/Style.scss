@@ -78,7 +78,7 @@
 .topics-wrapper {
   @extend %wrapper;
   display: grid;
-  grid-template-columns: 100fr;
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 30px;
   grid-row-gap: 30px;
@@ -89,22 +89,32 @@
     display: flex;
     gap: 50px;
     justify-content: center;
-    .topics {
-      border-radius: 50%;
-      text-align: center;
+    position: relative;
+    .topic-box {
       position: relative;
       height: 100px;
       width: 100px;
-      background-size: contain;
-      background-image: url(https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);
+      text-align: center;
+      .topics {
+        position: absolute;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-image: url(https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);
+      }
       a {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
         position: relative;
-        top: 3.2rem;
         display: block;
         color: index.$white;
         font-size: 2rem;
-        font-weight: 600;
-        text-decoration: none;
+        font-weight: 800;
+        line-height: 9rem;
+        backdrop-filter: blur(0.2rem);
       }
     }
   }
@@ -118,20 +128,27 @@
   top: 130px;
   width: 100%;
   padding-right: 40px;
-  justify-content: end;
-}
-
-.skip {
-  text-align: center;
-  a {
-    display: block;
-    font-size: 1.6rem;
-    text-decoration: none;
-    color: index.$main_clr;
-    font-weight: 700;
-  }
+  justify-content: flex-end;
 }
 
 .user-wrapper {
   @extend %wrapper;
+  .user-box {
+    @extend .shdw;
+    display: flex;
+    padding: 5px 5px;
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    .user-prof-small {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: solid 1px tomato;
+    }
+    .user-name {
+      border: solid 1px tomato;
+      text-align: left;
+    }
+  }
 }
