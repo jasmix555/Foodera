@@ -2,31 +2,30 @@
 @use "Index" as index;
 
 .logo {
-  position: relative;
   width: 200px;
   height: 200px;
+  position: relative;
   left: calc(50% - 200px / 2);
   border-radius: 10px;
   border: solid 1px index.$black;
   margin-top: 184px;
 }
 
+.btn {
+  @extend %btn;
+}
+
 .btn-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 11px;
   position: relative;
-  height: 121px;
-  width: 100%;
-  margin: 0 auto;
   align-items: center;
-
-  .btn {
-    @extend .btn;
-  }
+  width: 100%;
+  gap: 11px;
+  height: 121px;
 
   .btn-regist {
-    @extend .btn;
+    @extend %btn;
     background: index.$main_clr;
   }
 }
@@ -77,20 +76,12 @@
 }
 
 .topics-wrapper {
-  padding: 20px;
+  @extend %wrapper;
   display: grid;
   grid-template-columns: 100fr;
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 30px;
   grid-row-gap: 30px;
-  width: 325px;
-  height: 458px;
-  top: 189px;
-  overflow-y: scroll;
-  background: index.$white;
-  border-radius: 5px;
-  margin: 0 auto;
-  margin-top: 100px;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -104,10 +95,8 @@
       position: relative;
       height: 100px;
       width: 100px;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       background-size: contain;
       background-image: url(https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);
-      filter: blur(1px);
       a {
         position: relative;
         top: 3.2rem;
@@ -121,6 +110,17 @@
   }
 }
 
+.counter {
+  display: flex;
+  font-weight: 700;
+  font-size: 3rem;
+  position: absolute;
+  top: 130px;
+  width: 100%;
+  padding-right: 40px;
+  justify-content: end;
+}
+
 .skip {
   text-align: center;
   a {
@@ -130,4 +130,8 @@
     color: index.$main_clr;
     font-weight: 700;
   }
+}
+
+.user-wrapper {
+  @extend %wrapper;
 }

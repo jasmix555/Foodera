@@ -340,7 +340,7 @@ body {
   height: 100%;
 }
 
-.btn, .btn-wrapper .btn, .btn-wrapper .btn-regist {
+.btn, .btn-wrapper .btn-regist {
   width: 325px;
   height: 54.82px;
   background: #1e232c;
@@ -349,12 +349,11 @@ body {
   font-weight: 600;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.btn a, .btn-wrapper .btn a, .btn-wrapper .btn-regist a {
+.btn a, .btn-wrapper .btn-regist a {
   text-align: center;
   text-decoration: none;
   color: #f5f5f7;
   display: block;
-  margin: 0 auto;
   padding: 14px;
   display: block;
   width: 100%;
@@ -426,10 +425,22 @@ body {
   height: 100%;
 }
 
+.topics-wrapper, .user-wrapper {
+  width: 325px;
+  height: 458px;
+  top: 189px;
+  overflow-y: scroll;
+  margin: 0 auto;
+  margin-top: 100px;
+  background: #f5f5f7;
+  border-radius: 5px;
+  padding: 20px;
+}
+
 .logo {
-  position: relative;
   width: 200px;
   height: 200px;
+  position: relative;
   left: calc(50% - 100px);
   border-radius: 10px;
   border: solid 1px #1d1d1f;
@@ -439,15 +450,14 @@ body {
 .btn-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 11px;
   position: relative;
-  height: 121px;
-  width: 100%;
-  margin: 0 auto;
   align-items: center;
+  width: 100%;
+  gap: 11px;
+  height: 121px;
 }
 .btn-wrapper .btn-regist {
-  background: #40bfbf;
+  background: #fd9d46;
 }
 
 .main-txt {
@@ -496,20 +506,11 @@ body {
 }
 
 .topics-wrapper {
-  padding: 20px;
   display: grid;
   grid-template-columns: 100fr;
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 30px;
   grid-row-gap: 30px;
-  width: 325px;
-  height: 458px;
-  top: 189px;
-  overflow-y: scroll;
-  background: #f5f5f7;
-  border-radius: 5px;
-  margin: 0 auto;
-  margin-top: 100px;
 }
 .topics-wrapper::-webkit-scrollbar {
   display: none;
@@ -525,10 +526,8 @@ body {
   position: relative;
   height: 100px;
   width: 100px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-size: contain;
   background-image: url(https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);
-  filter: blur(1px);
 }
 .topics-wrapper .topic-container .topics a {
   position: relative;
@@ -540,6 +539,17 @@ body {
   text-decoration: none;
 }
 
+.counter {
+  display: flex;
+  font-weight: 700;
+  font-size: 3rem;
+  position: absolute;
+  top: 130px;
+  width: 100%;
+  padding-right: 40px;
+  justify-content: end;
+}
+
 .skip {
   text-align: center;
 }
@@ -547,6 +557,6 @@ body {
   display: block;
   font-size: 1.6rem;
   text-decoration: none;
-  color: #40bfbf;
+  color: #fd9d46;
   font-weight: 700;
 }

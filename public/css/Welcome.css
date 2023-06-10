@@ -340,27 +340,6 @@ body {
   height: 100%;
 }
 
-.btn {
-  width: 325px;
-  height: 54.82px;
-  background: #1e232c;
-  font-size: 1.6rem;
-  border-radius: 8px;
-  font-weight: 600;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.btn a {
-  text-align: center;
-  text-decoration: none;
-  color: #f5f5f7;
-  display: block;
-  margin: 0 auto;
-  padding: 14px;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
 .field {
   box-sizing: border-box;
   width: 325px;
