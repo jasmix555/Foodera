@@ -210,3 +210,28 @@
     line-height: 23rem;
   }
 }
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  // border-bottom: 1px solid index.$gray;
+  // @extend .shdw;
+  h1 {
+    line-height: 5rem;
+  }
+  .header-btn {
+    display: flex;
+    gap: 20px;
+    a {
+      text-decoration: none;
+      line-height: 5rem;
+    }
+    .notif-btn {
+      color: index.$acnt_clr;
+    }
+    .rank-btn {
+      color: index.$main_clr;
+    }
+  }
+}

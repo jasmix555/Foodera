@@ -739,3 +739,26 @@ body {
   position: relative;
   line-height: 23rem;
 }
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.header-wrapper h1 {
+  line-height: 5rem;
+}
+.header-wrapper .header-btn {
+  display: flex;
+  gap: 20px;
+}
+.header-wrapper .header-btn a {
+  text-decoration: none;
+  line-height: 5rem;
+}
+.header-wrapper .header-btn .notif-btn {
+  color: #06aed5;
+}
+.header-wrapper .header-btn .rank-btn {
+  color: #fd9d46;
+}
