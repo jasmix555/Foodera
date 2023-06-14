@@ -133,22 +133,80 @@
 
 .user-wrapper {
   @extend %wrapper;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   .user-box {
     @extend .shdw;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
     padding: 5px 5px;
     width: 100%;
     height: 60px;
     border-radius: 5px;
     .user-prof-small {
+      grid-area: 1 / 1 / 3 / 2;
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      border: solid 1px tomato;
+      @extend .shdw;
     }
     .user-name {
-      border: solid 1px tomato;
       text-align: left;
+      grid-area: 1 / 2 / 2 / 3;
     }
+    .user-topic-wrapper {
+      grid-area: 2 / 2 / 3 / 5;
+      display: flex;
+      gap: 10px;
+      overflow-x: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .user-topic {
+        border: solid 1px index.$black;
+        height: 20px;
+        border-radius: 2px;
+        p {
+          padding: 2px 5px 0 5px;
+          position: relative;
+        }
+      }
+    }
+    .follow-btn {
+      grid-area: 1 / 4 / 2 / 5;
+      @extend %follow;
+    }
+  }
+}
+
+.start-btn {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  left: calc(50% - 250px / 2);
+  top: 263px;
+  background: index.$dark;
+  border-radius: 50%;
+  text-align: center;
+  @extend .shdw;
+  a {
+    display: block;
+    text-decoration: none;
+    @extend .font-4rem;
+    color: index.$white;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    line-height: 23rem;
   }
 }

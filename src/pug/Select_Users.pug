@@ -16,19 +16,16 @@ html(lang="ja")
               .counter-max /5
         section
           .user-wrapper.shdw
-            .user-box
-              .user-prof-small
-              h2.user-name User
-              .user-topic-wrapper
-                .user-topic
-                  p #Topics
-                .user-topic
-                  p #Topics
-                .user-topic
-                  p #Topics
-              .follow-btn
-                a(href="#") Follow 
-        .btn-wrapper.ptop20
+            include _user-topic
+            include _user-topic
+            include _user-topic
+            include _user-topic
+            include _user-topic
+            include _user-topic
+            include _user-topic
+            include _user-topic
+            include _user-topic
+        .btn-wrapper.margin-top-2rem
           .btn
             a(href="Confirmation.html") Confirm
           .skip.ptop20

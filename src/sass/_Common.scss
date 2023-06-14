@@ -56,32 +56,16 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.ptop100 {
-  padding-top: 100px;
-}
-
-.ptop60 {
-  padding-top: 60px;
-}
-
-.ptop30 {
-  padding-top: 30px;
-}
-
-.ptop20 {
-  padding-top: 20px;
-}
-
-.mtop100 {
-  margin-top: 100px;
-}
-
-.mtop60 {
-  margin-top: 60px;
-}
-
-.mtop30 {
-  margin-top: 30px;
+@each $size in index.$sizes {
+  .margin-top-#{$size} {
+    margin-top: $size;
+  }
+  .padding-#{$size} {
+    padding: $size;
+  }
+  .font-#{$size} {
+    font-size: $size;
+  }
 }
 
 .back-btn {
@@ -115,4 +99,32 @@ body {
   background: index.$white;
   border-radius: 5px;
   padding: 20px;
+}
+
+%follow {
+  text-align: center;
+  position: relative;
+  top: 2px;
+  a {
+    text-decoration: none;
+    color: index.$black;
+    border: 2px solid index.$main_clr;
+    background: index.$white;
+    border-radius: 2px;
+    display: block;
+  }
+}
+
+%followed {
+  text-align: center;
+  position: relative;
+  top: 2px;
+  a {
+    text-decoration: none;
+    color: index.$white;
+    // border: 2px solid index.$main_clr;
+    background: index.$main_clr;
+    border-radius: 2px;
+    display: block;
+  }
 }
