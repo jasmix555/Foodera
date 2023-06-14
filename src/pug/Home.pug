@@ -5,15 +5,11 @@ html(lang="ja")
         title New_User
         link(rel="stylesheet", href="css/Style.css")
     body
-      section
-        .header-wrapper
-          h1.font-3rem Foodera
-          .header-btn
-            a(href="#").fa-solid.fa-bell.notif-btn.font-3rem
-            a(href="#").fa-solid.fa-crown.rank-btn.font-3rem
+      include _home-header
       section
         .story-wrapper
           .main-story.story
-            a(href="#")
+            a(href="#") prof
           .other-story.story
+      include _navbar
       include _temp_p_foot
