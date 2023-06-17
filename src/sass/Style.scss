@@ -317,14 +317,13 @@
 .post-wrapper {
   width: 390px;
   height: 730px;
-  border: solid 1px tomato;
   background: index.$white;
   .post-header {
     height: 60px;
     display: flex;
     justify-content: space-between;
     padding: 0px 30px;
-    border: solid 1px skyblue;
+    @extend .shdw;
     .post-user {
       display: flex;
       gap: 10px;
@@ -341,10 +340,67 @@
           border-radius: 50%;
         }
       }
+      .post-name {
+        font-size: 1.4rem;
+        font-weight: 400;
+      }
     }
-    .post-name {
-      font-size: 1.4rem;
-      font-weight: 400;
+    .post-settings {
+      height: 60px;
+      align-items: center;
+      display: flex;
+      a {
+        font-size: 3rem;
+        text-decoration: none;
+        color: index.$main_clr;
+      }
+    }
+  }
+  .post-pics-wrapper {
+    height: 460px;
+    overflow-y: scroll;
+    position: relative;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .post-pics {
+      display: flex;
+      .pics {
+        width: 390px;
+        height: 460px;
+        img {
+          width: inherit;
+          height: inherit;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  .post-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    a {
+      text-decoration: none;
+      display: block;
+      width: inherit;
+      height: inherit;
+      font-size: 3rem;
+      color: index.$acnt_clr;
+    }
+    .post-save {
+      display: flex;
+      gap: 10px;
+      p {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 3rem;
+      }
+    }
+    .post-like {
+      a {
+        color: index.$like_clr;
+      }
     }
   }
 }
