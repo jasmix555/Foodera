@@ -14,8 +14,12 @@ html(lang="ja")
             .field-wrapper.register-wrapper
               input(type="text" name="username" placeholder="Username").field
               input(type="text" name="email" placeholder="Email").field
-              input(type="password" name="password" placeholder="Password").field
-              input(type="password" name="password" placeholder="Confirm Password").field
+              .password-wrapper
+                input(type="password" name="password" placeholder="Password").field#text_password
+                a(href="#").fa-solid.fa-eye-slash#toggle_password
+              .password-wrapper
+                input(type="password" name="password" placeholder="Confirm Password").field#confirm_password
+                a(href="#").fa-solid.fa-eye-slash#toggle_password_conf
             .btn.margin-top-6rem
               a(href="Login_New.html") Agree and Register
         include _temp_p_foot

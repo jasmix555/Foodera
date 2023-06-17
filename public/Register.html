@@ -18,11 +18,16 @@
       <div class="field-wrapper register-wrapper">
         <input class="field" type="text" name="username" placeholder="Username">
         <input class="field" type="text" name="email" placeholder="Email">
-        <input class="field" type="password" name="password" placeholder="Password">
-        <input class="field" type="password" name="password" placeholder="Confirm Password">
+        <div class="password-wrapper">
+          <input class="field" type="password" name="password" placeholder="Password" id="text_password"><a class="fa-solid fa-eye-slash" href="#" id="toggle_password"></a>
+        </div>
+        <div class="password-wrapper">
+          <input class="field" type="password" name="password" placeholder="Confirm Password" id="confirm_password"><a class="fa-solid fa-eye-slash" href="#" id="toggle_password_conf"></a>
+        </div>
       </div>
       <div class="btn margin-top-6rem"><a href="Login_New.html">Agree and Register</a></div>
     </section>
     <script src="https://kit.fontawesome.com/f922c24c63.js" crossorigin="anonymous"> </script>
+    <script src="js/Style.js"> </script>
   </body>
 </html>
