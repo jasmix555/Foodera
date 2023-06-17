@@ -100,13 +100,14 @@
         border-radius: 50%;
         width: 100%;
         height: 100%;
-        background: hsla(0, 0%, 0%, 0.1);
-        // backdrop-filter: blur(10px);
-        z-index: 1;
+        background-position: center center;
+        background-size: cover;
         a {
-          border-radius: 50%;
-          width: 100%;
-          height: 100%;
+          background: hsla(0, 0%, 0%, 0.3);
+          backdrop-filter: blur(1px);
+          border-radius: inherit;
+          width: inherit;
+          height: inherit;
           text-decoration: none;
           position: relative;
           display: block;
@@ -115,8 +116,6 @@
           font-family: "BIZ UDGothic", sans-serif;
           font-weight: 700;
           line-height: 9rem;
-          background-position: center center;
-          background-size: cover;
         }
       }
     }
@@ -186,7 +185,18 @@
     }
     .follow-btn {
       grid-area: 1 / 4 / 2 / 5;
-      @extend %follow;
+      text-align: center;
+      position: relative;
+      top: 2px;
+      a {
+        text-decoration: none;
+        color: index.$black;
+        border: 2px solid index.$main_clr;
+        background: index.$white;
+        border-radius: 2px;
+        display: block;
+      }
+      // @extend .follow;
     }
   }
 }
@@ -300,6 +310,41 @@
     @extend .shdw;
     a {
       @extend %prof-pic;
+    }
+  }
+}
+
+.post-wrapper {
+  width: 390px;
+  height: 730px;
+  border: solid 1px tomato;
+  background: index.$white;
+  .post-header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px;
+    border: solid 1px skyblue;
+    .post-user {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      .post-prof {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        @extend .shdw;
+        a {
+          display: block;
+          width: inherit;
+          height: inherit;
+          border-radius: 50%;
+        }
+      }
+    }
+    .post-name {
+      font-size: 1.4rem;
+      font-weight: 400;
     }
   }
 }

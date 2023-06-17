@@ -1,7 +1,4 @@
 {
-}
-
-{
   const togglePassword = document.querySelector("#toggle_password");
   const togglePasswordConf = document.querySelector("#toggle_password_conf");
   const password = document.querySelector("#text_password");
