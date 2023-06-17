@@ -317,10 +317,11 @@
 }
 
 .post-wrapper {
-  position: absolute;
+  position: relative;
   width: 390px;
   height: 720px;
   background: index.$white;
+  border: solid 1px tomato;
   .post-header {
     height: 60px;
     display: flex;
@@ -382,8 +383,9 @@
   }
   .post-nav {
     display: flex;
-    justify-content: space-around;
-    padding: 5px;
+    justify-content: space-between;
+    padding: 10px 30px;
+    width: 100%;
     a {
       text-decoration: none;
       display: block;
@@ -401,10 +403,30 @@
         line-height: 3rem;
       }
     }
-    .post-like {
-      a {
-        color: index.$like_clr;
+    .post-btns {
+      display: flex;
+      gap: 15px;
+      .post-like {
+        a {
+          color: index.$like_clr;
+        }
       }
+    }
+  }
+  .post-text {
+    padding: 0px 30px;
+    .post-main-text {
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+    .post-info-text {
+      width: 330px;
+      font-size: 1.2rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      border: solid 1px tomato;
+      margin: 0;
     }
   }
 }
