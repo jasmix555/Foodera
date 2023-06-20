@@ -440,21 +440,38 @@
     }
   }
   .post-text {
-    padding: 0px 30px 15px 30px;
+    padding: 0px 20px 15px 20px;
+    overflow: hidden;
     .post-main-text {
       font-size: 1.4rem;
       font-weight: 400;
     }
     .post-info-text {
-      width: 330px;
+      display: flex;
       font-size: 1.2rem;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-      margin: 0;
+      flex-wrap: nowrap;
+      height: auto;
+      flex-direction: column;
+      .post-comment-wrapper {
+        display: -webkit-box;
+        .post-comment {
+          padding: 10px 0px;
+        }
+        .post-text-prof {
+          width: 30px;
+          height: 30px;
+          a {
+            border-radius: 50%;
+            display: block;
+            width: inherit;
+            height: inherit;
+            @extend %bg-pic;
+          }
+        }
+      }
     }
   }
-  .post-comment-wrapper {
+  .post-button-wrapper {
     @extend .shdw;
     width: 350px;
     height: 3rem;
