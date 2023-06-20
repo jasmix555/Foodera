@@ -16,17 +16,17 @@ submit.addEventListener("click", (e) => {
   }
 });
 
-input.addEventListener("keypress", function (event) {
+input.addEventListener("keypress", function (e) {
   //when enter is pressed or also when the there is no text in the textarea
-  if (event.code === "Enter" && !input.value == "") {
+  if (e.code === "Enter" && !input.value == "") {
     //prevent a bug where it opens a whole new website instead of staying in the same page
     //take the textarea value and enter it to the list
     addText();
     //after taking the value, erase the past value so that is looks clean
     input.value = "";
-  } else if (event.code === "Enter" && input.value == "") {
+  } else if (e.code === "Enter" && input.value == "") {
     //when there is no text inputted, alert that there needs to be a text
-    event.preventDefault();
+    e.preventDefault();
   }
 });
 
@@ -34,7 +34,7 @@ function addText() {
   textWrapper.innerHTML += `
   <div class="post-comment-wrapper">
     <div class="post-text-prof">
-      <a href="#" style="background-image: url(../public/img/people/0.jpeg);"> </a>
+      <a href="#" style="background-image: url(../public/img/people/0.jpeg);"></a>
       </div>
       <p class="post-comment">${input.value}</p>
   </div>

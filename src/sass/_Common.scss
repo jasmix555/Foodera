@@ -63,6 +63,9 @@ body {
   .ptop-#{$size} {
     padding-top: $size;
   }
+  .pbot-#{$size} {
+    padding-bottom: $size;
+  }
   .font-#{$size} {
     font-size: $size;
   }
@@ -139,4 +142,6 @@ body {
 %bg-pic {
   background-position: center center;
   background-size: cover;
+  display: block;
+  border-radius: 50%;
 }

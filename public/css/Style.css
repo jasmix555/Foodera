@@ -397,6 +397,10 @@ body {
   padding-top: 1rem;
 }
 
+.pbot-1rem {
+  padding-bottom: 1rem;
+}
+
 .font-1rem {
   font-size: 1rem;
 }
@@ -407,6 +411,10 @@ body {
 
 .ptop-2rem {
   padding-top: 2rem;
+}
+
+.pbot-2rem {
+  padding-bottom: 2rem;
 }
 
 .font-2rem {
@@ -421,6 +429,10 @@ body {
   padding-top: 3rem;
 }
 
+.pbot-3rem {
+  padding-bottom: 3rem;
+}
+
 .font-3rem {
   font-size: 3rem;
 }
@@ -431,6 +443,10 @@ body {
 
 .ptop-4rem {
   padding-top: 4rem;
+}
+
+.pbot-4rem {
+  padding-bottom: 4rem;
 }
 
 .font-4rem, .start-btn a {
@@ -445,6 +461,10 @@ body {
   padding-top: 5rem;
 }
 
+.pbot-5rem {
+  padding-bottom: 5rem;
+}
+
 .font-5rem {
   font-size: 5rem;
 }
@@ -455,6 +475,10 @@ body {
 
 .ptop-6rem {
   padding-top: 6rem;
+}
+
+.pbot-6rem {
+  padding-bottom: 6rem;
 }
 
 .font-6rem {
@@ -469,6 +493,10 @@ body {
   padding-top: 7rem;
 }
 
+.pbot-7rem {
+  padding-bottom: 7rem;
+}
+
 .font-7rem {
   font-size: 7rem;
 }
@@ -481,6 +509,10 @@ body {
   padding-top: 9rem;
 }
 
+.pbot-9rem {
+  padding-bottom: 9rem;
+}
+
 .font-9rem {
   font-size: 9rem;
 }
@@ -491,6 +523,10 @@ body {
 
 .ptop-10rem {
   padding-top: 10rem;
+}
+
+.pbot-10rem {
+  padding-bottom: 10rem;
 }
 
 .font-10rem {
@@ -538,9 +574,11 @@ body {
   border-radius: 50%;
 }
 
-.post-wrapper .post-text .post-info-text .post-comment-wrapper .post-text-prof a {
+.story-wrapper .story a, .post-wrapper .post-header .post-user .post-prof a, .post-wrapper .post-text .post-info-text .post-comment-wrapper .post-text-prof a {
   background-position: center center;
   background-size: cover;
+  display: block;
+  border-radius: 50%;
 }
 
 .logo {
@@ -797,12 +835,8 @@ body {
   border-radius: 50%;
 }
 .story-wrapper .story a {
-  display: block;
   height: 100%;
   width: 100%;
-  border-radius: 50%;
-  background-position: center center;
-  background-size: cover;
 }
 .story-wrapper .main-story {
   position: relative;
@@ -887,12 +921,8 @@ body {
   border-radius: 50%;
 }
 .post-wrapper .post-header .post-user .post-prof a {
-  background-size: cover;
-  background-position: center center;
-  display: block;
   width: inherit;
   height: inherit;
-  border-radius: 50%;
 }
 .post-wrapper .post-header .post-user .post-name {
   font-size: 1.4rem;
@@ -970,25 +1000,25 @@ body {
 .post-wrapper .post-text .post-info-text {
   display: flex;
   font-size: 1.2rem;
-  flex-wrap: nowrap;
-  height: auto;
   flex-direction: column;
 }
 .post-wrapper .post-text .post-info-text .post-comment-wrapper {
   display: -webkit-box;
+  padding: 5px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .post-wrapper .post-text .post-info-text .post-comment-wrapper .post-comment {
-  padding: 10px 0px;
+  padding-left: 2rem;
+  line-height: 3rem;
 }
 .post-wrapper .post-text .post-info-text .post-comment-wrapper .post-text-prof {
-  width: 30px;
-  height: 30px;
+  height: 100%;
 }
 .post-wrapper .post-text .post-info-text .post-comment-wrapper .post-text-prof a {
-  border-radius: 50%;
-  display: block;
-  width: inherit;
-  height: inherit;
+  width: 30px;
+  height: 30px;
 }
 .post-wrapper .post-button-wrapper {
   width: 350px;

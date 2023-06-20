@@ -267,12 +267,9 @@
     height: 60px;
     border-radius: 50%;
     a {
-      display: block;
+      @extend %bg-pic;
       height: 100%;
       width: 100%;
-      border-radius: 50%;
-      background-position: center center;
-      background-size: cover;
     }
   }
   .main-story {
@@ -362,12 +359,9 @@
         border-radius: 50%;
         @extend .shdw;
         a {
-          background-size: cover;
-          background-position: center center;
-          display: block;
+          @extend %bg-pic;
           width: inherit;
           height: inherit;
-          border-radius: 50%;
         }
       }
       .post-name {
@@ -449,22 +443,22 @@
     .post-info-text {
       display: flex;
       font-size: 1.2rem;
-      flex-wrap: nowrap;
-      height: auto;
       flex-direction: column;
       .post-comment-wrapper {
         display: -webkit-box;
+        padding: 5px 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         .post-comment {
-          padding: 10px 0px;
+          padding-left: 2rem;
+          line-height: 3rem;
         }
         .post-text-prof {
-          width: 30px;
-          height: 30px;
+          height: 100%;
           a {
-            border-radius: 50%;
-            display: block;
-            width: inherit;
-            height: inherit;
+            width: 30px;
+            height: 30px;
             @extend %bg-pic;
           }
         }
