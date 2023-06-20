@@ -385,7 +385,7 @@ body {
   padding-left: 20px;
 }
 
-.shdw, .user-wrapper .user-box, .user-wrapper .user-box .user-prof-small, .start-btn, .header-wrapper, .story-wrapper .story, .navbar-wrapper .profile-wrapper, .post-wrapper .post-header, .post-wrapper .post-header .post-user .post-prof {
+.shdw, .user-wrapper .user-box, .user-wrapper .user-box .user-prof-small, .start-btn, .header-wrapper, .story-wrapper .story, .navbar-wrapper .profile-wrapper, .post-wrapper .post-header, .post-wrapper .post-header .post-user .post-prof, .post-wrapper .post-comment-wrapper {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -775,9 +775,9 @@ body {
 }
 
 .story-wrapper {
-  padding: 5px 15px;
+  padding: 10px 15px;
   width: 100%;
-  height: 70px;
+  height: 75px;
   display: -webkit-box;
   flex-wrap: nowrap;
   overflow-x: scroll;
@@ -796,6 +796,30 @@ body {
   height: 100%;
   width: 100%;
   border-radius: 50%;
+  background-position: center center;
+  background-size: cover;
+}
+.story-wrapper .main-story {
+  position: relative;
+  display: block;
+}
+.story-wrapper .main-story .main-story-btn {
+  color: #1d1d1f;
+  line-height: 2.2rem;
+  display: block;
+  position: absolute;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  background: #06aed5;
+  border-radius: 50%;
+  bottom: 0;
+  right: -7px;
+  border: solid 2px #1d1d1f;
+}
+.story-wrapper .main-story .main-story-btn i {
+  border: solid 1px tomato;
 }
 
 .navbar-wrapper {
@@ -837,9 +861,9 @@ body {
 .post-wrapper {
   position: relative;
   width: 390px;
-  height: 720px;
+  height: 100%;
+  padding-bottom: 2rem;
   background: #f5f5f7;
-  border: solid 1px tomato;
 }
 .post-wrapper .post-header {
   height: 60px;
@@ -858,6 +882,8 @@ body {
   border-radius: 50%;
 }
 .post-wrapper .post-header .post-user .post-prof a {
+  background-size: cover;
+  background-position: center center;
   display: block;
   width: inherit;
   height: inherit;
@@ -872,7 +898,7 @@ body {
   align-items: center;
   display: flex;
 }
-.post-wrapper .post-header .post-settings a {
+.post-wrapper .post-header .post-settings button {
   font-size: 3rem;
   text-decoration: none;
   color: #fd9d46;
@@ -904,7 +930,7 @@ body {
   padding: 10px 30px;
   width: 100%;
 }
-.post-wrapper .post-nav a {
+.post-wrapper .post-nav button {
   text-decoration: none;
   display: block;
   width: inherit;
@@ -925,14 +951,14 @@ body {
   display: flex;
   gap: 15px;
 }
-.post-wrapper .post-nav .post-btns .post-like a {
+.post-wrapper .post-nav .post-btns .post-like button {
   color: #f29c8c;
 }
 .post-wrapper .post-text {
-  padding: 0px 30px;
+  padding: 0px 30px 15px 30px;
 }
 .post-wrapper .post-text .post-main-text {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 400;
 }
 .post-wrapper .post-text .post-info-text {
@@ -941,6 +967,29 @@ body {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  border: solid 1px tomato;
   margin: 0;
+}
+.post-wrapper .post-comment-wrapper {
+  width: 350px;
+  height: 3rem;
+  border-radius: 5px;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+.post-wrapper .post-comment-wrapper #comment {
+  padding-left: 2rem;
+  font-size: 1.2rem;
+  width: inherit;
+  height: inherit;
+}
+.post-wrapper .post-comment-wrapper #submit {
+  position: absolute;
+  font-weight: 600;
+  right: 20px;
+  top: 0;
+  color: #fd9d46;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
 }

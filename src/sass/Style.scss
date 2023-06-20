@@ -251,9 +251,9 @@
 }
 
 .story-wrapper {
-  padding: 5px 15px;
+  padding: 10px 15px;
   width: 100%;
-  height: 70px;
+  height: 75px;
   display: -webkit-box;
   flex-wrap: nowrap;
   overflow-x: scroll;
@@ -271,6 +271,30 @@
       height: 100%;
       width: 100%;
       border-radius: 50%;
+      background-position: center center;
+      background-size: cover;
+    }
+  }
+  .main-story {
+    position: relative;
+    display: block;
+    .main-story-btn {
+      color: index.$black;
+      line-height: 2.2rem;
+      display: block;
+      position: absolute;
+      font-size: 1.5rem;
+      text-align: center;
+      width: 25px;
+      height: 25px;
+      background: index.$acnt_clr;
+      border-radius: 50%;
+      bottom: 0;
+      right: -7px;
+      border: solid 2px index.$black;
+      i {
+        border: solid 1px tomato;
+      }
     }
   }
 }
@@ -319,9 +343,9 @@
 .post-wrapper {
   position: relative;
   width: 390px;
-  height: 720px;
+  height: 100%;
+  padding-bottom: 2rem;
   background: index.$white;
-  border: solid 1px tomato;
   .post-header {
     height: 60px;
     display: flex;
@@ -338,6 +362,8 @@
         border-radius: 50%;
         @extend .shdw;
         a {
+          background-size: cover;
+          background-position: center center;
           display: block;
           width: inherit;
           height: inherit;
@@ -353,7 +379,7 @@
       height: 60px;
       align-items: center;
       display: flex;
-      a {
+      button {
         font-size: 3rem;
         text-decoration: none;
         color: index.$main_clr;
@@ -386,7 +412,7 @@
     justify-content: space-between;
     padding: 10px 30px;
     width: 100%;
-    a {
+    button {
       text-decoration: none;
       display: block;
       width: inherit;
@@ -407,16 +433,16 @@
       display: flex;
       gap: 15px;
       .post-like {
-        a {
+        button {
           color: index.$like_clr;
         }
       }
     }
   }
   .post-text {
-    padding: 0px 30px;
+    padding: 0px 30px 15px 30px;
     .post-main-text {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       font-weight: 400;
     }
     .post-info-text {
@@ -425,8 +451,32 @@
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
-      border: solid 1px tomato;
       margin: 0;
+    }
+  }
+  .post-comment-wrapper {
+    @extend .shdw;
+    width: 350px;
+    height: 3rem;
+    border-radius: 5px;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+    #comment {
+      padding-left: 2rem;
+      font-size: 1.2rem;
+      width: inherit;
+      height: inherit;
+    }
+    #submit {
+      position: absolute;
+      font-weight: 600;
+      right: 20px;
+      top: 0;
+      color: index.$main_clr;
+      font-size: 1.4rem;
+      line-height: 2.8rem;
     }
   }
 }

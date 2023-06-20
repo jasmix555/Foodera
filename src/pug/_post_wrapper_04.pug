@@ -4,33 +4,35 @@
       .post-prof
         a(href="#") 
       .post-name
-        h2 Name
+        h2 Ramen_Baka
     .post-settings
-      a(href="#").fa-solid.fa-ellipsis
+      button.fa-solid.fa-ellipsis
   .post-pics-wrapper
     .post-pics
       .pics
-        img(src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60;", alt="")
+        img(src="img/food/noodles/01.jpeg", alt="")
       .pics
-        img(src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60", alt="")
+        img(src="img/food/noodles/02.jpeg", alt="")
       .pics
-        img(src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60", alt="")
+        img(src="img/food/noodles/03.jpeg", alt="")
       .pics
         img(src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60", alt="")
   .post-nav
     .post-save
-      a(href="#").fa-solid.fa-bookmark
+      button.fa-solid.fa-bookmark
       p 2 Saved
     .post-btns
       .post-like
-        a(href="#").fa-solid.fa-heart
+        button.fa-solid.fa-heart
       .post-comment-btn
-        a(href="#").fa-solid.fa-comment
+        button.fa-solid.fa-comment
       .post-share
-        a(href="#").fa-solid.fa-share
+        button.fa-solid.fa-share
   .post-text
     .post-main-text
       h3 Catchphrase
     .post-info-text
       p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-  .post-comment
+  .post-comment-wrapper
+    input(type="text", placeholder="コメントを入力. . ." , id="comment")
+    input(type="button", value="Post" ,id="submit")
