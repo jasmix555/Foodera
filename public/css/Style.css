@@ -1001,6 +1001,7 @@ body {
   display: flex;
   font-size: 1.2rem;
   flex-direction: column;
+  line-height: 3rem;
 }
 .post-wrapper .post-text .post-info-text .post-comment-wrapper {
   display: -webkit-box;
@@ -1010,8 +1011,7 @@ body {
   text-overflow: ellipsis;
 }
 .post-wrapper .post-text .post-info-text .post-comment-wrapper .post-comment {
-  padding-left: 2rem;
-  line-height: 3rem;
+  padding-left: 1rem;
 }
 .post-wrapper .post-text .post-info-text .post-comment-wrapper .post-text-prof {
   height: 100%;
@@ -1019,6 +1019,11 @@ body {
 .post-wrapper .post-text .post-info-text .post-comment-wrapper .post-text-prof a {
   width: 30px;
   height: 30px;
+}
+.post-wrapper .post-text .post-info-text .post-comment-wrapper .prof-comment-name {
+  font-weight: 800;
+  font-family: "Urbanist", sans-serif;
+  padding-left: 0.6rem;
 }
 .post-wrapper .post-button-wrapper {
   width: 350px;

@@ -36,6 +36,9 @@ function addText() {
     <div class="post-text-prof">
       <a href="#" style="background-image: url(../public/img/people/0.jpeg);"></a>
       </div>
+      <div class="prof-comment-name">
+        <h3>Jason</h3>
+      </div>
       <p class="post-comment">${input.value}</p>
   </div>
   `;
