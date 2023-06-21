@@ -1,6 +1,5 @@
 const input = document.querySelector("#comment");
 const submit = document.querySelector("#submit");
-console.log(input, submit);
 const textWrapper = document.querySelector(".post-info-text");
 
 submit.addEventListener("click", (e) => {
