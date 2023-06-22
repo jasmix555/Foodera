@@ -79,3 +79,18 @@ for (let i = 0; i < likeWrapper.length; i++) {
     }
   });
 }
+
+const saveWrapper = document.querySelectorAll(".post-save");
+for (let i = 0; i < saveWrapper.length; i++) {
+  saveWrapper[i].addEventListener("click", (e) => {
+    if (e.target.classList.contains("fa-regular")) {
+      e.target.classList.remove("fa-regular");
+      e.target.classList.add("fa-solid");
+      // e.target.classList.add("fa-beat");
+      // e.target.style.add = "--fa-animation-duration: 0.5s;";
+    } else {
+      e.target.classList.remove("fa-solid");
+      e.target.classList.add("fa-regular");
+    }
+  });
+}
