@@ -15,8 +15,12 @@ submit.forEach((ev) => {
     const wrapper = ev.closest(".post-wrapper");
     const textWrapper = wrapper.querySelector(".post-info-text");
     //else, take the inputted value of the text area and send it(or let a addtext variable work
-    addText(textWrapper, inputVal);
-    inputWrapper.value = "";
+    if (inputWrapper.value == "") {
+      inputWrapper.value = "";
+    } else {
+      addText(textWrapper, inputVal);
+      inputWrapper.value = "";
+    }
   });
 });
 
@@ -58,4 +62,20 @@ function addText(evnt, text) {
       <p class="post-comment">${text}</p>
   </div>
   `;
+}
+
+const likeWrapper = document.querySelectorAll(".post-like");
+
+for (let i = 0; i < likeWrapper.length; i++) {
+  likeWrapper[i].addEventListener("click", (e) => {
+    if (e.target.classList.contains("fa-regular")) {
+      e.target.classList.remove("fa-regular");
+      e.target.classList.add("fa-solid");
+      e.target.classList.add("fa-beat");
+      e.target.style.add = "--fa-animation-duration: 0.5s;";
+    } else {
+      e.target.classList.remove("fa-solid");
+      e.target.classList.add("fa-regular");
+    }
+  });
 }

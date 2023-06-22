@@ -427,6 +427,7 @@
       display: flex;
       gap: 15px;
       .post-like {
+        transition: 200ms ease-in-out;
         button {
           color: index.$like_clr;
         }

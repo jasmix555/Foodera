@@ -986,6 +986,9 @@ body {
   display: flex;
   gap: 15px;
 }
+.post-wrapper .post-nav .post-btns .post-like {
+  transition: 200ms ease-in-out;
+}
 .post-wrapper .post-nav .post-btns .post-like button {
   color: #f29c8c;
 }
