@@ -71,8 +71,10 @@ for (let i = 0; i < likeWrapper.length; i++) {
     if (e.target.classList.contains("fa-regular")) {
       e.target.classList.remove("fa-regular");
       e.target.classList.add("fa-solid");
-      // e.target.classList.add("fa-beat");
-      // e.target.style.add = "--fa-animation-duration: 0.5s;";
+      e.target.classList.add("fa-beat");
+      setTimeout(() => {
+        e.target.classList.remove("fa-beat");
+      }, 1000);
     } else {
       e.target.classList.remove("fa-solid");
       e.target.classList.add("fa-regular");
@@ -86,6 +88,10 @@ for (let i = 0; i < saveWrapper.length; i++) {
     if (e.target.classList.contains("fa-regular")) {
       e.target.classList.remove("fa-regular");
       e.target.classList.add("fa-solid");
+      e.target.classList.add("fa-beat");
+      setTimeout(() => {
+        e.target.classList.remove("fa-beat");
+      }, 1000);
     } else {
       e.target.classList.remove("fa-solid");
       e.target.classList.add("fa-regular");

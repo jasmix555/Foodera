@@ -427,7 +427,6 @@
       display: flex;
       gap: 15px;
       .post-like {
-        transition: 200ms ease-in-out;
         button {
           color: index.$like_clr;
         }
@@ -494,6 +493,38 @@
       color: index.$main_clr;
       font-size: 1.4rem;
       line-height: 2.8rem;
+    }
+  }
+}
+
+.searchbar-wrapper {
+  width: 29rem;
+  height: 3rem;
+  flex-shrink: 0;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  padding: 0px 2rem;
+  background: #f9f4f4;
+  margin: 0 auto;
+  margin-top: 5rem;
+  @extend .shdw;
+  &::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f002";
+    position: absolute;
+    line-height: 3rem;
+  }
+  input {
+    color: index.$black;
+    width: inherit;
+    height: inherit;
+    display: block;
+    outline: none;
+    padding-left: 2.6rem;
+    font-weight: 600;
+    &::placeholder {
+      color: index.$black;
     }
   }
 }

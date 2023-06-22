@@ -385,7 +385,7 @@ body {
   padding-left: 20px;
 }
 
-.shdw, .user-wrapper .user-box, .user-wrapper .user-box .user-prof-small, .start-btn, .header-wrapper, .story-wrapper .story, .navbar-wrapper .profile-wrapper, .post-wrapper .post-header, .post-wrapper .post-header .post-user .post-prof, .post-wrapper .post-button-wrapper {
+.shdw, .user-wrapper .user-box, .user-wrapper .user-box .user-prof-small, .start-btn, .header-wrapper, .story-wrapper .story, .navbar-wrapper .profile-wrapper, .post-wrapper .post-header, .post-wrapper .post-header .post-user .post-prof, .post-wrapper .post-button-wrapper, .searchbar-wrapper {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -986,9 +986,6 @@ body {
   display: flex;
   gap: 15px;
 }
-.post-wrapper .post-nav .post-btns .post-like {
-  transition: 200ms ease-in-out;
-}
 .post-wrapper .post-nav .post-btns .post-like button {
   color: #f29c8c;
 }
@@ -1051,4 +1048,38 @@ body {
   color: #fd9d46;
   font-size: 1.4rem;
   line-height: 2.8rem;
+}
+
+.searchbar-wrapper {
+  width: 29rem;
+  height: 3rem;
+  flex-shrink: 0;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  padding: 0px 2rem;
+  background: #f9f4f4;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+.searchbar-wrapper::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f002";
+  position: absolute;
+  line-height: 3rem;
+}
+.searchbar-wrapper input {
+  color: #1d1d1f;
+  width: inherit;
+  height: inherit;
+  display: block;
+  outline: none;
+  padding-left: 2.6rem;
+  font-weight: 600;
+}
+.searchbar-wrapper input:-ms-input-placeholder {
+  color: #1d1d1f;
+}
+.searchbar-wrapper input::placeholder {
+  color: #1d1d1f;
 }
