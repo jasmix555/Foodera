@@ -7,8 +7,10 @@
   position: relative;
   left: calc(50% - 200px / 2);
   border-radius: 10px;
-  border: solid 1px index.$black;
   margin-top: 184px;
+  background-image: url(../../public/img/logo.png);
+  background-size: contain;
+  background-position: center;
 }
 
 .btn {
