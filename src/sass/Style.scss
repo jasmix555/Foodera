@@ -437,7 +437,7 @@
   padding-bottom: 2rem;
   background: index.$white;
   .post-header {
-    height: 60px;
+    height: 4.2rem;
     display: flex;
     justify-content: space-between;
     padding: 0px 30px;
@@ -447,8 +447,8 @@
       gap: 10px;
       align-items: center;
       .post-prof {
-        width: 50px;
-        height: 50px;
+        width: 3.6rem;
+        height: 3.6rem;
         border-radius: 50%;
         @extend .shdw;
         a {
@@ -458,12 +458,11 @@
         }
       }
       .post-name {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: 400;
       }
     }
     .post-settings {
-      height: 60px;
       align-items: center;
       display: flex;
       button {
