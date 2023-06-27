@@ -232,8 +232,9 @@
   width: 100%;
   height: 100%;
   top: 0;
-  background: hsla(0, 0%, 56%, 0.3);
-  display: none;
+  background: hsla(0, 0%, 25%, 0.3);
+  transform: translateY(100%);
+  transition: transform 120ms ease-in-out;
   .share-content {
     position: absolute;
     bottom: 0;
@@ -248,6 +249,9 @@
       padding: 0.6rem 3rem;
       border-bottom: 1px solid index.$black;
       font-size: 1.2rem;
+      h1 {
+        font-weight: 400;
+      }
       button {
         font-size: 1.8rem;
         border: solid 1px index.$sub_gray;
@@ -259,12 +263,52 @@
     }
     .share-icons-wrapper {
       width: 100%;
-      border: solid 1px tomato;
-      height: 100%;
+      // height: 100%;
+      display: flex;
+      gap: 3rem;
+      overflow-x: scroll;
+      padding: 2rem;
+      &::-webkit-scrollbar {
+        display: none;
+      }
       .icons {
-        height: 3rem;
-        width: 3rem;
-        border: solid 1px tomato;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        a {
+          background-position: center;
+          background-size: contain;
+          display: block;
+          width: 5rem;
+          height: 5rem;
+          text-decoration: none;
+        }
+        p {
+          font-size: 1.2rem;
+          color: index.$sub_gray;
+        }
+      }
+    }
+    .download-photo {
+      width: 80%;
+      margin: 0 auto;
+      height: 3.6rem;
+      a {
+        border: solid 1px index.$sub_gray;
+        border-radius: 5px;
+        background: #fff;
+        padding: 0 2rem;
+        display: block;
+        text-decoration: none;
+        font-size: 1.6rem;
+        color: index.$black;
+        &:before {
+          font-family: "Font Awesome 6 Free";
+          font-weight: 900;
+          content: "\f019";
+          padding-right: 1rem;
+        }
       }
     }
   }
@@ -460,12 +504,15 @@
       display: block;
       width: inherit;
       height: inherit;
-      font-size: 3rem;
+      font-size: 2.6rem;
       color: index.$acnt_clr;
     }
     .post-save {
       display: flex;
       gap: 10px;
+      button {
+        font-size: 3rem;
+      }
       p {
         font-size: 1.6rem;
         font-weight: 600;
@@ -533,6 +580,7 @@
       font-size: 1.2rem;
       width: inherit;
       height: inherit;
+      outline: none;
     }
     #submit {
       position: absolute;
