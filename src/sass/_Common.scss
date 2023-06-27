@@ -144,3 +144,13 @@ body {
   display: block;
   border-radius: 50%;
 }
+
+%prof-scroll {
+  display: -webkit-box;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  gap: 15px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

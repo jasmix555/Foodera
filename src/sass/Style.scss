@@ -226,12 +226,62 @@
   }
 }
 
+.navbar-wrapper {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  height: 8rem;
+  justify-content: space-between;
+  border: solid 1px index.$gray;
+  width: 100%;
+  align-items: center;
+  padding: 0 2rem 2rem 2rem;
+  background: index.$white;
+  a {
+    text-decoration: none;
+    color: index.$black;
+    display: block;
+  }
+  .upload-wrapper {
+    width: 55px;
+    height: 35px;
+    background: index.$main_clr;
+    border-radius: 5px;
+    text-align: center;
+    a {
+      font-size: 2.5rem;
+      display: block;
+      line-height: 3.5rem;
+      color: index.$white;
+    }
+  }
+  .profile-wrapper {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    position: relative;
+    @extend .shdw;
+    a {
+      @extend %prof-pic;
+    }
+  }
+  .home-btn {
+    width: 15rem;
+    height: 0.5rem;
+    border-radius: 5px;
+    background: #000;
+    position: absolute;
+    bottom: 1rem;
+    right: 31%;
+  }
+}
+
 .header-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 2rem 1.5rem 0 1.5rem;
   border-bottom: 1px solid index.$gray;
-  height: 40px;
+  height: 6rem;
   @extend .shdw;
   h1 {
     line-height: 4rem;
@@ -256,13 +306,7 @@
   padding: 10px 15px;
   width: 100%;
   height: 75px;
-  display: -webkit-box;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  gap: 15px;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  @extend %prof-scroll;
   .story {
     @extend .shdw;
     width: 60px;
@@ -294,47 +338,6 @@
       i {
         border: solid 1px tomato;
       }
-    }
-  }
-}
-
-.navbar-wrapper {
-  display: flex;
-  position: fixed;
-  bottom: 0;
-  height: 60px;
-  justify-content: space-between;
-  border: solid 1px index.$gray;
-  width: 100%;
-  align-items: center;
-  padding: 0 20px;
-  background: index.$white;
-  a {
-    text-decoration: none;
-    color: index.$black;
-    display: block;
-  }
-  .upload-wrapper {
-    width: 55px;
-    height: 35px;
-    background: index.$main_clr;
-    border-radius: 5px;
-    text-align: center;
-    a {
-      font-size: 2.5rem;
-      display: block;
-      line-height: 3.5rem;
-      color: index.$white;
-    }
-  }
-  .profile-wrapper {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    position: relative;
-    @extend .shdw;
-    a {
-      @extend %prof-pic;
     }
   }
 }
@@ -527,6 +530,41 @@
     font-weight: 600;
     &::placeholder {
       color: index.$black;
+    }
+  }
+}
+
+.trend-wrapper {
+  width: 100%;
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1.8rem;
+    padding-bottom: 0;
+  }
+  .trend-prof-wrapper {
+    @extend %prof-scroll;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    .trend-prof {
+      position: relative;
+      margin-right: 1.5rem;
+      a {
+        @extend .shdw;
+        @extend %bg-pic;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+      }
+      .trend-texts {
+        padding: 0.4rem 0;
+        position: relative;
+        right: 0.4rem;
+        p {
+          color: index.$sub_gray;
+          font-weight: 600;
+        }
+      }
     }
   }
 }
