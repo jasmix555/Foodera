@@ -6,6 +6,14 @@ html {
 
 body {
   width: 390px;
+  padding-bottom: 8.4rem;
+}
+
+html,
+body {
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 %btn {

@@ -64,7 +64,7 @@ function addText(evnt, text) {
   `;
 }
 
-const likeWrapper = document.querySelectorAll(".post-like");
+const likeWrapper = document.querySelectorAll(".fa-heart");
 
 for (let i = 0; i < likeWrapper.length; i++) {
   likeWrapper[i].addEventListener("click", (e) => {
@@ -82,7 +82,7 @@ for (let i = 0; i < likeWrapper.length; i++) {
   });
 }
 
-const saveWrapper = document.querySelectorAll(".post-save");
+const saveWrapper = document.querySelectorAll(".fa-bookmark");
 for (let i = 0; i < saveWrapper.length; i++) {
   saveWrapper[i].addEventListener("click", (e) => {
     if (e.target.classList.contains("fa-regular")) {
