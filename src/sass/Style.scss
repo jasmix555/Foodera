@@ -288,6 +288,14 @@
           font-size: 1.2rem;
           color: index.$sub_gray;
         }
+        button {
+          background-position: center;
+          background-size: contain;
+          display: block;
+          width: 5rem;
+          height: 5rem;
+          text-decoration: none;
+        }
       }
     }
     .download-photo {
@@ -336,6 +344,7 @@
     background: index.$main_clr;
     border-radius: 5px;
     text-align: center;
+    @extend .shdw;
     a {
       font-size: 2.5rem;
       display: block;
@@ -440,7 +449,7 @@
     height: 4.2rem;
     display: flex;
     justify-content: space-between;
-    padding: 0px 30px;
+    padding: 2.2rem 3rem;
     @extend .shdw;
     .post-user {
       display: flex;

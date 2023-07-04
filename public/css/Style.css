@@ -390,7 +390,7 @@ body::-webkit-scrollbar {
   padding-left: 20px;
 }
 
-.shdw, .user-wrapper .user-box, .user-wrapper .user-box .user-prof-small, .start-btn, .navbar-wrapper .profile-wrapper, .header-wrapper, .story-wrapper .story, .post-wrapper .post-header, .post-wrapper .post-header .post-user .post-prof, .post-wrapper .post-button-wrapper, .searchbar-wrapper, .trend-wrapper .trend-prof-wrapper .trend-prof a, .grid .grid-item, .grid .grid-item .recc-post-text .recc-name a {
+.shdw, .user-wrapper .user-box, .user-wrapper .user-box .user-prof-small, .start-btn, .navbar-wrapper .upload-wrapper, .navbar-wrapper .profile-wrapper, .header-wrapper, .story-wrapper .story, .post-wrapper .post-header, .post-wrapper .post-header .post-user .post-prof, .post-wrapper .post-button-wrapper, .searchbar-wrapper, .trend-wrapper .trend-prof-wrapper .trend-prof a, .grid .grid-item, .grid .grid-item .recc-post-text .recc-name a {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -874,6 +874,14 @@ body::-webkit-scrollbar {
   font-size: 1.2rem;
   color: #7b7d80;
 }
+.share-wrapper .share-content .share-icons-wrapper .icons button {
+  background-position: center;
+  background-size: contain;
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  text-decoration: none;
+}
 .share-wrapper .share-content .download-photo {
   width: 80%;
   margin: 0 auto;
@@ -1015,7 +1023,7 @@ body::-webkit-scrollbar {
   height: 4.2rem;
   display: flex;
   justify-content: space-between;
-  padding: 0px 30px;
+  padding: 2.2rem 3rem;
 }
 .post-wrapper .post-header .post-user {
   display: flex;
