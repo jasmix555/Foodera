@@ -390,7 +390,7 @@ body::-webkit-scrollbar {
   padding-left: 20px;
 }
 
-.shdw, .user-wrapper .user-box, .user-wrapper .user-box .user-prof-small, .start-btn, .navbar-wrapper .upload-wrapper, .navbar-wrapper .profile-wrapper, .header-wrapper, .story-wrapper .story, .post-wrapper .post-header, .post-wrapper .post-header .post-user .post-prof, .post-wrapper .post-button-wrapper, .searchbar-wrapper, .trend-wrapper .trend-prof-wrapper .trend-prof a, .grid .grid-item, .grid .grid-item .recc-post-text .recc-name a {
+.shdw, .user-wrapper .user-box, .user-wrapper .user-box .user-prof-small, .start-btn, .navbar-wrapper .upload-wrapper, .navbar-wrapper .prof-pic-wrapper, .header-wrapper, .story-wrapper .story, .post-wrapper .post-header, .post-wrapper .post-header .post-user .post-prof, .post-wrapper .post-button-wrapper, .searchbar-wrapper, .trend-wrapper .trend-prof-wrapper .trend-prof a, .grid .grid-item, .grid .grid-item .recc-post-text .recc-name a, .main-profile-wrapper .profile-content .profile-pic {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -571,7 +571,7 @@ body::-webkit-scrollbar {
   padding: 20px;
 }
 
-.navbar-wrapper .profile-wrapper a {
+.navbar-wrapper .prof-pic-wrapper a, .main-profile-wrapper .profile-content .profile-pic button {
   background: url(../../public/img/people/0.jpeg) center center/contain;
   width: 100%;
   height: 100%;
@@ -934,7 +934,7 @@ body::-webkit-scrollbar {
   line-height: 3.5rem;
   color: #f5f5f7;
 }
-.navbar-wrapper .profile-wrapper {
+.navbar-wrapper .prof-pic-wrapper {
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -1308,4 +1308,56 @@ body::-webkit-scrollbar {
 }
 .location-wrapper .location-main .fa-chevron-down.rotated {
   transform: rotate(180deg);
+}
+
+.main-profile-wrapper {
+  padding: 2.4rem;
+}
+.main-profile-wrapper .profile-header {
+  display: flex;
+}
+.main-profile-wrapper .profile-header .profile-name {
+  font-size: 1.6rem;
+  width: 100%;
+  text-align: center;
+}
+.main-profile-wrapper .profile-header .profile-setting {
+  font-size: 2rem;
+  position: relative;
+  right: 2rem;
+}
+.main-profile-wrapper .profile-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.main-profile-wrapper .profile-content .profile-pic {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  position: relative;
+}
+.main-profile-wrapper .profile-content .profile-count {
+  display: flex;
+  justify-content: flex-end;
+  gap: 3rem;
+  text-align: center;
+}
+.main-profile-wrapper .profile-content .profile-count p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.main-profile-wrapper .profile-content .profile-count p span {
+  display: block;
+  font-size: 1.8rem;
+}
+
+.level-bar {
+  margin: 0 auto;
+  width: 80%;
+  height: 1.5rem;
+  flex-shrink: 0;
+  border-radius: 0.2rem;
+  background: #f9f4f4;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }

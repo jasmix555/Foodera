@@ -352,7 +352,7 @@
       color: index.$white;
     }
   }
-  .profile-wrapper {
+  .prof-pic-wrapper {
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -749,4 +749,60 @@
       }
     }
   }
+}
+
+.main-profile-wrapper {
+  padding: 2.4rem;
+  .profile-header {
+    display: flex;
+    .profile-name {
+      font-size: 1.6rem;
+      width: 100%;
+      text-align: center;
+    }
+    .profile-setting {
+      font-size: 2rem;
+      position: relative;
+      right: 2rem;
+    }
+  }
+  .profile-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .profile-pic {
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      position: relative;
+      @extend .shdw;
+      button {
+        @extend %prof-pic;
+      }
+    }
+    .profile-count {
+      display: flex;
+      justify-content: flex-end;
+      gap: 3rem;
+      text-align: center;
+      p {
+        font-size: 1.2rem;
+        font-weight: 600;
+        span {
+          display: block;
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
+.level-bar {
+  margin: 0 auto;
+  width: 80%;
+  height: 1.5rem;
+  flex-shrink: 0;
+  border-radius: 0.2rem;
+  background: #f9f4f4;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }
