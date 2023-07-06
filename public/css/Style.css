@@ -1291,3 +1291,32 @@ body::-webkit-scrollbar {
   font-size: 2rem;
   color: #f29c8c;
 }
+
+.location-wrapper {
+  position: relative;
+  top: 0;
+  width: 100%;
+  border: solid 1px tomato;
+}
+.location-wrapper .location-main {
+  display: flex;
+  border: solid 1px skyblue;
+  align-items: center;
+  font-size: 2rem;
+  padding: 0.2rem 2rem;
+  font-weight: 900;
+}
+.location-wrapper .location-main::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f3c5";
+  padding-right: 0.4rem;
+  font-size: 2rem;
+}
+.location-wrapper .location-main .fa-chevron-down {
+  margin-left: 0.8rem;
+  transition: transform 0.3s ease-in-out;
+}
+.location-wrapper .location-main .fa-chevron-down.rotated {
+  transform: rotate(180deg);
+}
