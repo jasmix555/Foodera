@@ -362,23 +362,14 @@
       @extend %prof-pic;
     }
   }
-  .home-btn {
-    width: 15rem;
-    height: 0.5rem;
-    border-radius: 5px;
-    background: #000;
-    position: absolute;
-    bottom: 1rem;
-    right: 31%;
-  }
 }
 
 .header-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 2rem 1.5rem 0 1.5rem;
+  padding: 0 1.5rem;
   border-bottom: 1px solid index.$gray;
-  height: 6rem;
+  height: 4rem;
   @extend .shdw;
   h1 {
     line-height: 4rem;
@@ -611,7 +602,7 @@
   padding: 0px 2rem;
   background: #f9f4f4;
   margin: 0 auto;
-  margin-top: 5rem;
+  margin-top: 2rem;
   @extend .shdw;
   &::before {
     font-family: "Font Awesome 6 Free";
@@ -736,10 +727,9 @@
   position: relative;
   top: 0;
   width: 100%;
-  border: solid 1px tomato;
+  padding: 0.6rem 2rem;
   .location-main {
     display: flex;
-    border: solid 1px skyblue;
     align-items: center;
     font-size: 2rem;
     padding: 0.2rem 2rem;
