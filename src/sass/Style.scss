@@ -380,7 +380,7 @@
           .mini-file-btn {
             grid-area: 1 / 4 / 2 / 5;
             display: flex;
-            justify-content: end;
+            justify-content: flex-end;
             button {
               display: block;
               border: solid 2.6px index.$black;
@@ -403,35 +403,35 @@
   display: flex;
   position: fixed;
   bottom: 0;
-  height: 8rem;
   justify-content: space-between;
   border: solid 1px index.$gray;
   width: 100%;
   align-items: center;
-  padding: 0 2rem 2rem 2rem;
+  padding: 0.4rem 3rem 2.4rem 3rem;
   background: index.$white;
   a {
+    font-size: 2.4rem;
     text-decoration: none;
     color: index.$black;
     display: block;
   }
   .upload-wrapper {
-    width: 55px;
-    height: 35px;
+    width: 45px;
+    height: 30px;
     background: index.$main_clr;
     border-radius: 5px;
     text-align: center;
     @extend .shdw;
     a {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       display: block;
-      line-height: 3.5rem;
+      line-height: 3rem;
       color: index.$white;
     }
   }
   .prof-pic-wrapper {
-    width: 45px;
-    height: 45px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
     position: relative;
     @extend .shdw;
@@ -512,13 +512,12 @@
   width: 390px;
   height: 100%;
   padding-bottom: 2rem;
-  background: index.$white;
+  background: #fff;
   .post-header {
     height: 4.2rem;
     display: flex;
     justify-content: space-between;
     padding: 2.2rem 3rem;
-    @extend .shdw;
     .post-user {
       display: flex;
       gap: 10px;
@@ -562,10 +561,11 @@
       .pics {
         width: 390px;
         height: 460px;
+        background: index.$white;
         img {
           width: inherit;
           height: inherit;
-          object-fit: cover;
+          object-fit: contain;
         }
       }
     }
