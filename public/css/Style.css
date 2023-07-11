@@ -913,7 +913,7 @@ body::-webkit-scrollbar {
   height: 38rem;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-  background: hsla(0, 0%, 100%, 0.7);
+  background: #f9f4f4;
 }
 .bookmark-save-wrapper .save-content .save-inner {
   padding-top: 2rem;

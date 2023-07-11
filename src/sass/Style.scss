@@ -309,7 +309,8 @@
     height: 38rem;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
-    background: hsla(0, 0%, 100%, 0.7);
+    // background: hsla(0, 0%, 100%, 0.7);
+    background: index.$gray;
     .save-header {
       @extend %modal-header;
     }
