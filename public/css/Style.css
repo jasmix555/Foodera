@@ -390,7 +390,7 @@ body::-webkit-scrollbar {
   padding-left: 20px;
 }
 
-.shdw, .user-wrapper .user-box, .user-wrapper .user-box .user-prof-small, .start-btn, .navbar-wrapper .upload-wrapper, .navbar-wrapper .prof-pic-wrapper, .header-wrapper, .story-wrapper .story, .post-wrapper .post-header, .post-wrapper .post-header .post-user .post-prof, .post-wrapper .post-button-wrapper, .searchbar-wrapper, .trend-wrapper .trend-prof-wrapper .trend-prof a, .grid .grid-item, .grid .grid-item .recc-post-text .recc-name a, .main-profile-wrapper .profile-content .profile-pic {
+.shdw, .user-wrapper .user-box, .user-wrapper .user-box .user-prof-small, .start-btn, .bookmark-save-wrapper .save-content .save-inner .save-create, .bookmark-save-wrapper .save-content .save-inner .save-folders .mini-file, .navbar-wrapper .upload-wrapper, .navbar-wrapper .prof-pic-wrapper, .header-wrapper, .story-wrapper .story, .post-wrapper .post-header, .post-wrapper .post-header .post-user .post-prof, .post-wrapper .post-button-wrapper, .searchbar-wrapper, .trend-wrapper .trend-prof-wrapper .trend-prof a, .grid .grid-item, .grid .grid-item .recc-post-text .recc-name a, .main-profile-wrapper .profile-content .profile-pic {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -594,6 +594,25 @@ body::-webkit-scrollbar {
 }
 .story-wrapper::-webkit-scrollbar, .trend-wrapper .trend-prof-wrapper::-webkit-scrollbar {
   display: none;
+}
+
+.share-wrapper .share-content .share-header, .bookmark-save-wrapper .save-content .save-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 3rem;
+  border-bottom: 1px solid #1d1d1f;
+  font-size: 1.2rem;
+}
+.share-wrapper .share-content .share-header h1, .bookmark-save-wrapper .save-content .save-header h1 {
+  font-weight: 600;
+}
+.share-wrapper .share-content .share-header button, .bookmark-save-wrapper .save-content .save-header button {
+  font-size: 1.8rem;
+  border: solid 1px #c1c8d6;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 30%;
+  background: #f5f5f7;
 }
 
 .logo {
@@ -826,25 +845,7 @@ body::-webkit-scrollbar {
   height: 21rem;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-  background: #f6f6f6;
-}
-.share-wrapper .share-content .share-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.6rem 3rem;
-  border-bottom: 1px solid #1d1d1f;
-  font-size: 1.2rem;
-}
-.share-wrapper .share-content .share-header h1 {
-  font-weight: 400;
-}
-.share-wrapper .share-content .share-header button {
-  font-size: 1.8rem;
-  border: solid 1px #7b7d80;
-  width: 2.6rem;
-  height: 2.6rem;
-  border-radius: 30%;
-  background: #f5f5f7;
+  background: #f9f4f4;
 }
 .share-wrapper .share-content .share-icons-wrapper {
   width: 100%;
@@ -904,13 +905,71 @@ body::-webkit-scrollbar {
   padding-right: 1rem;
 }
 
+.bookmark-save-wrapper {
+  z-index: 10000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: hsla(0, 0%, 25%, 0.3);
+  transform: translateY(100%);
+  transition: transform 120ms ease-in-out;
+}
+.bookmark-save-wrapper .save-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 38rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background: #f9f4f4;
+}
+.bookmark-save-wrapper .save-content .save-inner {
+  padding-top: 2rem;
+  display: flex;
+  align-items: end;
+  gap: 2rem;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+.bookmark-save-wrapper .save-content .save-inner .save-create {
+  width: 120px;
+  height: 30px;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 3.2rem;
+  font-weight: 500;
+  background: #f9f4f4;
+}
+.bookmark-save-wrapper .save-content .save-inner .save-create button {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.bookmark-save-wrapper .save-content .save-inner .save-create button::before {
+  content: "+";
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+  padding-right: 0.2rem;
+}
+.bookmark-save-wrapper .save-content .save-inner .save-folders {
+  width: 100%;
+}
+.bookmark-save-wrapper .save-content .save-inner .save-folders .mini-file {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+}
+
 .navbar-wrapper {
   display: flex;
   position: fixed;
   bottom: 0;
   height: 8rem;
   justify-content: space-between;
-  border: solid 1px #f6f6f6;
+  border: solid 1px #f9f4f4;
   width: 100%;
   align-items: center;
   padding: 0 2rem 2rem 2rem;
@@ -944,7 +1003,7 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: space-between;
   padding: 0 1.5rem;
-  border-bottom: 1px solid #f6f6f6;
+  border-bottom: 1px solid #f9f4f4;
   height: 4rem;
 }
 .header-wrapper h1 {
@@ -1231,7 +1290,7 @@ body::-webkit-scrollbar {
   width: 48%;
   padding: 0.3rem;
   background: #f7f8f9;
-  border: 2px solid #e8ecf4;
+  border: 2px solid #c1c8d6;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
 }

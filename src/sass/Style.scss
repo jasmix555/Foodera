@@ -244,22 +244,7 @@
     border-top-right-radius: 0.5rem;
     background: index.$gray;
     .share-header {
-      display: flex;
-      justify-content: space-between;
-      padding: 0.6rem 3rem;
-      border-bottom: 1px solid index.$black;
-      font-size: 1.2rem;
-      h1 {
-        font-weight: 400;
-      }
-      button {
-        font-size: 1.8rem;
-        border: solid 1px index.$sub_gray;
-        width: 2.6rem;
-        height: 2.6rem;
-        border-radius: 30%;
-        background: index.$white;
-      }
+      @extend %modal-header;
     }
     .share-icons-wrapper {
       width: 100%;
@@ -316,6 +301,69 @@
           font-weight: 900;
           content: "\f019";
           padding-right: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.bookmark-save-wrapper {
+  z-index: 10000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: hsla(0, 0%, 25%, 0.3);
+  transform: translateY(100%);
+  transition: transform 120ms ease-in-out;
+  .save-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 38rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    background: index.$gray;
+    .save-header {
+      @extend %modal-header;
+    }
+    .save-inner {
+      padding-top: 2rem;
+      display: flex;
+      align-items: end;
+      gap: 2rem;
+      flex-direction: column;
+      width: 80%;
+      margin: 0 auto;
+      .save-create {
+        width: 120px;
+        height: 30px;
+        font-size: 1.4rem;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 3.2rem;
+        font-weight: 500;
+        background: index.$gray;
+        @extend .shdw;
+        button {
+          display: block;
+          width: 100%;
+          height: 100%;
+          &::before {
+            content: "\2b";
+            font-weight: 900;
+            font-family: "Font Awesome 6 Free";
+            padding-right: 0.2rem;
+          }
+        }
+      }
+      .save-folders {
+        width: 100%;
+        .mini-file {
+          width: 100%;
+          height: 50px;
+          border-radius: 5px;
+          @extend .shdw;
         }
       }
     }

@@ -162,3 +162,22 @@ body {
     display: none;
   }
 }
+
+%modal-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 3rem;
+  border-bottom: 1px solid index.$black;
+  font-size: 1.2rem;
+  h1 {
+    font-weight: 600;
+  }
+  button {
+    font-size: 1.8rem;
+    border: solid 1px index.$recc_brdr;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 30%;
+    background: index.$white;
+  }
+}
