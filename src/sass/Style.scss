@@ -145,6 +145,21 @@
   justify-content: flex-end;
 }
 
+.follow-all {
+  display: flex;
+  font-weight: 700;
+  font-size: 1.4rem;
+  position: absolute;
+  top: 14rem;
+  right: 3rem;
+  padding: 0 1rem;
+  text-align: center;
+  align-items: center;
+  justify-content: flex-end;
+  border: index.$main_clr solid 2px;
+  border-radius: 2px;
+}
+
 .user-wrapper {
   @extend %wrapper;
   width: 90%;
@@ -204,7 +219,6 @@
       position: relative;
       top: 2px;
       button {
-        padding: 0.2rem;
         font-weight: 600;
         width: 100%;
         text-decoration: none;
