@@ -83,6 +83,8 @@ for (let i = 0; i < likeWrapper.length; i++) {
 }
 
 const saveWrapper = document.querySelectorAll(".fa-bookmark");
+const saveCounter = document.querySelectorAll(".save-counter span");
+
 for (let i = 0; i < saveWrapper.length; i++) {
   saveWrapper[i].addEventListener("click", (e) => {
     if (e.target.classList.contains("fa-regular")) {
@@ -92,9 +94,23 @@ for (let i = 0; i < saveWrapper.length; i++) {
       setTimeout(() => {
         e.target.classList.remove("fa-beat");
       }, 1000);
+      increaseCounter(i); // Call function to increase the counter
     } else {
       e.target.classList.remove("fa-solid");
       e.target.classList.add("fa-regular");
+      decreaseCounter(i); // Call function to decrease the counter
     }
   });
+}
+
+function increaseCounter(index) {
+  // Add 1 to the counter value
+  let currentValue = parseInt(saveCounter[index].textContent);
+  saveCounter[index].textContent = currentValue + 1;
+}
+
+function decreaseCounter(index) {
+  // Decrease the counter value by 1
+  let currentValue = parseInt(saveCounter[index].textContent);
+  saveCounter[index].textContent = currentValue - 1;
 }

@@ -1217,6 +1217,9 @@ body::-webkit-scrollbar {
   font-weight: 600;
   line-height: 3rem;
 }
+.post-wrapper .post-nav .post-save p span {
+  padding-right: 0.4rem;
+}
 .post-wrapper .post-nav .post-btns {
   display: flex;
   gap: 15px;
