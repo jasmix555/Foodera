@@ -9,52 +9,52 @@ html(lang="ja")
             .back-btn
               a(href="Welcome.html").fa-solid.fa-angle-left
         section
-            h1.main-txt Select Topics!
+            h1.main-txt カテゴリ選択！
         section
             .counter
-              .counter-value
-                i(value="0")
-              .counter-max /3
+              span 0
+              |/5
         section
           .topics-wrapper.shdw
             .topic-container
               .topic-box
                 .topics(Style="background-image:url(https://images.unsplash.com/photo-1602273660127-a0000560a4c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8amFwYW5lc2UlMjBmb29kfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);")
-                  a(href="#") 洋食
+                  button(data-original-html="洋食") 洋食
               .topic-box
                 .topics(Style="background-image:url(https://plus.unsplash.com/premium_photo-1683121324382-d35dc2c32bdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YW1lcmljYW4lMjBmb29kfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);")
-                  a(href="#" ) 和食
+                  button(data-original-html="和食") 和食
             .topic-container
               .topic-box
                 .topics(Style="background-image:url(https://images.unsplash.com/photo-1498654896293-37aacf113fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8a29yZWFuJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);")
-                  a(href="#" ) 韓国
+                  button(data-original-html="韓国") 韓国
               .topic-box
                 .topics(Style="background-image:url(https://images.unsplash.com/photo-1595295333158-4742f28fbd85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aXRhbGlhbiUyMGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60);")
-                  a(href="#" ) イタリア
+                  button(data-original-html="イタリア") イタリア
             .topic-container
               .topic-box
                 .topics(Style="background-image:url(https://plus.unsplash.com/premium_photo-1669150852121-19bab9ca75f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGhhaSUyMGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60;")
-                  a(href="#" ) タイ
+                  button(data-original-html="タイ") タイ
               .topic-box
                 .topics(Style="background-image:url(https://images.unsplash.com/photo-1579916087028-2cedd4dceceb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGZyZW5jaCUyMGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60;")
-                  a(href="#" ) フレンチ
+                  button(data-original-html="フレンチ") フレンチ
             .topic-container
               .topic-box
                 .topics(Style="background-image:url(https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2hpbmVzZSUyMGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60;")
-                  a(href="#" ) 中華
+                  button(data-original-html="中華") 中華
               .topic-box
                 .topics(Style="background-image:url(https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZGVzc2VydHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60;")
-                  a(href="#" ) スイーツ
+                  button(data-original-html="スイーツ") スイーツ
             .topic-container
               .topic-box
                 .topics(Style="background-image:url(https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVhdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60;")
-                  a(href="#" ) 肉
+                  button(data-original-html="肉") 肉
               .topic-box
                 .topics(Style="background-image:url(https://images.unsplash.com/photo-1623341214825-9f4f963727da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmFtZW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60;")
-                  a(href="#" ) ラーメン
+                  button(data-original-html="ラーメン") ラーメン
         .btn-wrapper.margin-top-2rem
           .btn
             a(href="Select_Users.html") Confirm
           .skip.ptop20
             a(href="Select_Users.html") Skip
         include Components/_temp_p_foot
+        script(src="js/Topics.js") 

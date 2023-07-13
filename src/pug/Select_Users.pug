@@ -9,11 +9,11 @@ html(lang="ja")
             .back-btn
               a(href="Select_Topics.html").fa-solid.fa-angle-left
         section
-            h1.main-txt Select Users!
+            h1.main-txt おすすめユーザ！
         section
             .counter
-              .counter-value 0
-              .counter-max /5
+              span 0
+              |/5
         section
           .user-wrapper.shdw
             include Components/_user_topic
@@ -31,3 +31,4 @@ html(lang="ja")
           .skip.ptop20
             a(href="Confirmation.html") Skip
         include Components/_temp_p_foot
+        script(src="js/SelUsers.js") 

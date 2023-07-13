@@ -726,10 +726,8 @@ body::-webkit-scrollbar {
   background-position: center center;
   background-size: cover;
 }
-.topics-wrapper .topic-container .topic-box .topics a {
+.topics-wrapper .topic-container .topic-box .topics button {
   background: hsla(0, 0%, 0%, 0.3);
-  -webkit-backdrop-filter: blur(1px);
-          backdrop-filter: blur(1px);
   border-radius: inherit;
   width: inherit;
   height: inherit;
@@ -741,6 +739,17 @@ body::-webkit-scrollbar {
   font-family: "BIZ UDGothic", sans-serif;
   font-weight: 700;
   line-height: 9rem;
+}
+.topics-wrapper .topic-container .topic-box .topics button.checked {
+  background: hsla(0, 0%, 0%, 0.3);
+}
+.topics-wrapper .topic-container .topic-box .topics button.checked::after {
+  content: "\f00c";
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+  font-size: 4rem;
+  text-align: center;
+  color: #f5f5f7;
 }
 
 .counter {
@@ -755,9 +764,11 @@ body::-webkit-scrollbar {
 }
 
 .user-wrapper {
+  width: 90%;
+  padding: 1.4rem;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 2rem;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -774,6 +785,7 @@ body::-webkit-scrollbar {
   width: 100%;
   height: 60px;
   border-radius: 5px;
+  background: #f9f4f4;
 }
 .user-wrapper .user-box .user-prof-small {
   grid-area: 1/1/3/2;
@@ -788,7 +800,7 @@ body::-webkit-scrollbar {
 .user-wrapper .user-box .user-topic-wrapper {
   grid-area: 2/2/3/5;
   display: flex;
-  gap: 10px;
+  gap: 1rem;
   overflow-x: scroll;
 }
 .user-wrapper .user-box .user-topic-wrapper::-webkit-scrollbar {
@@ -809,13 +821,23 @@ body::-webkit-scrollbar {
   position: relative;
   top: 2px;
 }
-.user-wrapper .user-box .follow-btn a {
+.user-wrapper .user-box .follow-btn button {
+  padding: 0.2rem;
+  font-weight: 600;
+  width: 100%;
   text-decoration: none;
   color: #1d1d1f;
   border: 2px solid #fd9d46;
   background: #f5f5f7;
   border-radius: 2px;
   display: block;
+}
+.user-wrapper .user-box .follow-btn button.checked {
+  background: #fd9d46;
+  color: #f5f5f7;
+}
+.user-wrapper .user-box .follow-btn button.checked::before {
+  content: "Followed";
 }
 
 .start-btn {
