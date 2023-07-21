@@ -1011,10 +1011,14 @@
     .post-content {
       padding: 1rem 2rem;
       .user-prof-content {
-        display: flex;
-        gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
         align-items: center;
         .post-prof {
+          grid-area: 1 / 1 / 2 / 2;
           width: 3.6rem;
           height: 3.6rem;
           border-radius: 50%;
@@ -1026,8 +1030,27 @@
           }
         }
         .post-name {
+          grid-area: 1 / 2 / 2 / 3;
           font-size: 1.2rem;
           font-weight: 400;
+          border: solid 1px tomato;
+          text-align: left;
+        }
+        .follow-btn {
+          grid-area: 1 / 4 / 2 / 5;
+          text-align: center;
+          position: relative;
+          button {
+            width: 8rem;
+            height: 3rem;
+            text-decoration: none;
+            color: index.$black;
+            border: 2px solid index.$main_clr;
+            background: index.$white;
+            border-radius: 5px;
+            display: block;
+            font-size: 1.2rem;
+          }
         }
       }
     }
