@@ -78,6 +78,16 @@ body {
   }
 }
 
+%post-settings {
+  align-items: center;
+  display: flex;
+  button {
+    font-size: 3rem;
+    text-decoration: none;
+    color: index.$main_clr;
+  }
+}
+
 .back-btn {
   position: relative;
   width: 50px;
