@@ -390,7 +390,7 @@ body::-webkit-scrollbar {
   padding-left: 20px;
 }
 
-.shdw, .user-wrapper .user-box, .user-wrapper .user-box .user-prof-small, .start-btn, .bookmark-save-wrapper .save-content .save-inner .save-create, .bookmark-save-wrapper .save-content .save-inner .save-folders .mini-file, .bookmark-save-wrapper .save-content .save-inner .save-folders .mini-file .mini-file-btn button, .navbar-wrapper .upload-wrapper, .navbar-wrapper .prof-pic-wrapper, .header-wrapper, .story-wrapper .story, .post-wrapper .post-header .post-user .post-prof, .post-wrapper .post-button-wrapper, .searchbar-wrapper, .trend-wrapper .trend-prof-wrapper .trend-prof a, .grid .grid-item, .grid .grid-item .recc-post-text .recc-name a, .main-profile-wrapper .profile-content .profile-pic, .user-post-wrapper .user-post-content .post-content .user-prof-content .post-prof {
+.shdw, .user-wrapper .user-box, .user-wrapper .user-box .user-prof-small, .start-btn, .bookmark-save-wrapper .save-content .save-inner .save-create, .bookmark-save-wrapper .save-content .save-inner .save-folders .mini-file, .bookmark-save-wrapper .save-content .save-inner .save-folders .mini-file .mini-file-btn button, .navbar-wrapper .upload-wrapper, .navbar-wrapper .prof-pic-wrapper, .header-wrapper, .story-wrapper .story, .post-wrapper .post-header .post-user .post-prof, .post-wrapper .post-button-wrapper, .searchbar-wrapper, .trend-wrapper .trend-prof-wrapper .trend-prof a, .grid .grid-item, .grid .grid-item .recc-post-text .recc-name a, .main-profile-wrapper .profile-content .profile-pic, .user-post-wrapper .user-post-content .post-content .user-prof-content .post-prof a {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -1590,32 +1590,27 @@ body::-webkit-scrollbar {
   padding: 1rem 2rem;
 }
 .user-post-wrapper .user-post-content .post-content .user-prof-content {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 .user-post-wrapper .user-post-content .post-content .user-prof-content .post-prof {
-  grid-area: 1/1/2/2;
   width: 3.6rem;
   height: 3.6rem;
-  border-radius: 50%;
+  background: none;
 }
 .user-post-wrapper .user-post-content .post-content .user-prof-content .post-prof a {
+  border-radius: 50%;
   width: inherit;
   height: inherit;
 }
 .user-post-wrapper .user-post-content .post-content .user-prof-content .post-name {
-  grid-area: 1/2/2/3;
   font-size: 1.2rem;
   font-weight: 400;
-  border: solid 1px tomato;
   text-align: left;
+  margin-right: 120px;
 }
 .user-post-wrapper .user-post-content .post-content .user-prof-content .follow-btn {
-  grid-area: 1/4/2/5;
   text-align: center;
   position: relative;
 }
@@ -1629,4 +1624,47 @@ body::-webkit-scrollbar {
   border-radius: 5px;
   display: block;
   font-size: 1.2rem;
+}
+.user-post-wrapper .user-post-footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 1.3rem;
+  border-top: 2px solid #06aed5;
+}
+.user-post-wrapper .user-post-footer .post-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  width: 100%;
+}
+.user-post-wrapper .user-post-footer .post-nav button {
+  text-decoration: none;
+  display: block;
+  width: inherit;
+  height: inherit;
+  font-size: 2.6rem;
+  color: #06aed5;
+}
+.user-post-wrapper .user-post-footer .post-nav .post-save {
+  display: flex;
+  gap: 10px;
+}
+.user-post-wrapper .user-post-footer .post-nav .post-save button {
+  font-size: 3rem;
+}
+.user-post-wrapper .user-post-footer .post-nav .post-save p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 3rem;
+}
+.user-post-wrapper .user-post-footer .post-nav .post-save p span {
+  padding-right: 0.4rem;
+}
+.user-post-wrapper .user-post-footer .post-nav .post-btns {
+  display: flex;
+  gap: 15px;
+}
+.user-post-wrapper .user-post-footer .post-nav .post-btns .post-like button {
+  color: #f29c8c;
 }
