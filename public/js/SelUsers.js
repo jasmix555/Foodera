@@ -1,5 +1,3 @@
-// your-script.js
-
 // Function to toggle the "checked" class and update the counter value
 function toggleTopic(button) {
   if (button.classList.contains("checked")) {

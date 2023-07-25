@@ -950,10 +950,6 @@
 }
 
 .user-post-wrapper {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 390px;
   height: 100%;
   background: #fff;
@@ -970,7 +966,7 @@
       left: 0;
       width: 40px;
       height: 40px;
-      button {
+      a {
         border: 1px solid #d4d8df;
         background: index.$white;
         display: block;
@@ -1014,9 +1010,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 1rem 0;
         .post-prof {
-          width: 3.6rem;
-          height: 3.6rem;
+          width: 3rem;
+          height: 3rem;
           background: none;
           a {
             @extend .shdw;
@@ -1028,9 +1025,8 @@
         }
         .post-name {
           font-size: 1.2rem;
-          font-weight: 400;
           text-align: left;
-          margin-right: 120px;
+          margin-right: 150px;
         }
         .follow-btn {
           text-align: center;
@@ -1045,8 +1041,18 @@
             border-radius: 5px;
             display: block;
             font-size: 1.2rem;
+            &.checked {
+              background: index.$main_clr;
+              color: index.$white;
+              &::before {
+                content: "Followed";
+              }
+            }
           }
         }
+      }
+      .user-post-prof-content {
+        border: solid 1px tomato;
       }
     }
   }
