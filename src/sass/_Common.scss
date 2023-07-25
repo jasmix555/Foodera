@@ -202,3 +202,28 @@ body {
   transform: translateY(100%);
   transition: transform 120ms ease-in-out;
 }
+
+.follow-btn {
+  grid-area: 1 / 4 / 2 / 5;
+  text-align: center;
+  position: relative;
+  top: 2px;
+  button {
+    @extend .shdw;
+    font-weight: 600;
+    width: 100%;
+    text-decoration: none;
+    border: 2px solid index.$main_clr;
+    border-radius: 2px;
+    display: block;
+    background: index.$main_clr;
+    color: index.$white;
+    &.checked {
+      color: index.$black;
+      background: index.$white;
+      &::before {
+        content: "Followed";
+      }
+    }
+  }
+}

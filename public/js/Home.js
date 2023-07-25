@@ -12,7 +12,7 @@ submit.forEach((ev) => {
     const inputWrapper = ev
       .closest(".post-button-wrapper")
       .querySelector("#comment");
-    const wrapper = ev.closest(".post-wrapper");
+    const wrapper = ev.closest(".post-wrapper , .user-post-wrapper");
     const textWrapper = wrapper.querySelector(".post-info-text");
     //else, take the inputted value of the text area and send it(or let a addtext variable work
     if (inputWrapper.value == "") {
@@ -32,9 +32,8 @@ input.forEach((ev) => {
     const inputWrapper = ev
       .closest(".post-button-wrapper")
       .querySelector("#comment");
-    const wrapper = ev.closest(".post-wrapper");
+    const wrapper = ev.closest(".post-wrapper , .user-post-wrapper");
     const textWrapper = wrapper.querySelector(".post-info-text");
-
     //when enter is pressed or also when the there is no text in the textarea
     if (e.code === "Enter" && !ev.value == "") {
       //prevent a bug where it opens a whole new website instead of staying in the same page
@@ -60,8 +59,25 @@ function addText(evnt, text) {
         <h3>Jason</h3>
       </div>
       <p class="post-comment">${text}</p>
+      <div class="post-like">
+        <button class="fa-regular fa-heart" onclick="toggleHeart(event)"></button>
+      </div>
   </div>
   `;
+}
+
+function toggleHeart(e) {
+  if (e.target.classList.contains("fa-regular")) {
+    e.target.classList.remove("fa-regular");
+    e.target.classList.add("fa-solid");
+    e.target.classList.add("fa-beat");
+    setTimeout(() => {
+      e.target.classList.remove("fa-beat");
+    }, 1000);
+  } else {
+    e.target.classList.remove("fa-solid");
+    e.target.classList.add("fa-regular");
+  }
 }
 
 const likeWrapper = document.querySelectorAll(".fa-heart");

@@ -213,29 +213,7 @@
         }
       }
     }
-    .follow-btn {
-      grid-area: 1 / 4 / 2 / 5;
-      text-align: center;
-      position: relative;
-      top: 2px;
-      button {
-        font-weight: 600;
-        width: 100%;
-        text-decoration: none;
-        color: index.$black;
-        border: 2px solid index.$main_clr;
-        background: index.$white;
-        border-radius: 2px;
-        display: block;
-        &.checked {
-          background: index.$main_clr;
-          color: index.$white;
-          &::before {
-            content: "Followed";
-          }
-        }
-      }
-    }
+    @extend .follow-btn;
   }
 }
 
@@ -643,35 +621,6 @@
       font-size: 1.4rem;
       font-weight: 400;
     }
-    .post-info-text {
-      display: flex;
-      font-size: 1.2rem;
-      flex-direction: column;
-      line-height: 3rem;
-      .post-comment-wrapper {
-        display: -webkit-box;
-        padding: 5px 0;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        .post-comment {
-          padding-left: 1rem;
-        }
-        .post-text-prof {
-          height: 100%;
-          a {
-            width: 30px;
-            height: 30px;
-            @extend %bg-pic;
-          }
-        }
-        .prof-comment-name {
-          font-weight: 800;
-          font-family: "Urbanist", sans-serif;
-          padding-left: 0.6rem;
-        }
-      }
-    }
   }
   .post-button-wrapper {
     @extend .shdw;
@@ -697,6 +646,50 @@
       color: index.$main_clr;
       font-size: 1.4rem;
       line-height: 2.8rem;
+    }
+  }
+}
+
+.post-info-text {
+  display: flex;
+  font-size: 1.2rem;
+  flex-direction: column;
+  line-height: 3rem;
+  .post-comment-wrapper {
+    width: 100%;
+    display: flex;
+    padding: 5px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .post-comment {
+      padding-left: 1rem;
+      width: 100%;
+    }
+    .post-text-prof {
+      padding-left: 1rem;
+      height: 100%;
+      a {
+        width: 30px;
+        height: 30px;
+        @extend %bg-pic;
+      }
+    }
+    .prof-comment-name {
+      font-weight: 800;
+      font-family: "Urbanist", sans-serif;
+      padding-left: 0.6rem;
+    }
+    .post-like {
+      color: index.$like_clr;
+      font-size: 2rem;
+      width: 100%;
+      position: relative;
+      .fa-heart {
+        position: absolute;
+        right: 1rem;
+        line-height: 2.6rem;
+      }
     }
   }
 }
@@ -953,6 +946,7 @@
   width: 390px;
   height: 100%;
   background: #fff;
+  padding-bottom: 20px;
   .user-post-header {
     display: flex;
     width: 100%;
@@ -1028,75 +1022,94 @@
           text-align: left;
           margin-right: 150px;
         }
+        @extend .follow-btn;
         .follow-btn {
-          text-align: center;
-          position: relative;
           button {
             width: 8rem;
             height: 3rem;
-            text-decoration: none;
-            color: index.$black;
-            border: 2px solid index.$main_clr;
-            background: index.$white;
-            border-radius: 5px;
-            display: block;
             font-size: 1.2rem;
-            &.checked {
-              background: index.$main_clr;
-              color: index.$white;
-              &::before {
-                content: "Followed";
-              }
-            }
+            border-radius: 5px;
           }
         }
       }
       .user-post-prof-content {
-        border: solid 1px tomato;
+        line-height: 2rem;
       }
     }
   }
-  .user-post-footer {
-    width: 100%;
-    position: absolute;
+  .post-info-text {
+    padding: 1rem 2rem;
+  }
+}
+
+.user-post-footer {
+  background: #fff;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 1.3rem;
+  border-top: 1px solid index.$sub_gray;
+  .post-button-wrapper {
+    padding: 8px 20px 5px 20px;
+    border-radius: 5px;
+    position: relative;
+    left: 0;
     bottom: 0;
-    padding-bottom: 1.3rem;
-    border-top: 2px solid index.$acnt_clr;
-    .post-nav {
-      display: flex;
-      justify-content: space-between;
-      padding: 10px 30px;
+    margin: 0 auto;
+    #comment {
+      padding: 0.4rem 1rem;
+      padding-left: 2rem;
+      font-size: 1.2rem;
+      outline: none;
+      background: index.$gray;
       width: 100%;
+      @extend .shdw;
+    }
+    #submit {
+      position: absolute;
+      font-weight: 600;
+      right: 30px;
+      top: 55%;
+      transform: translateY(-50%);
+      color: index.$main_clr;
+      font-size: 1.4rem;
+      line-height: 2.8rem;
+    }
+  }
+  .post-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 20px 8px 40px;
+    width: 100%;
+    button {
+      text-decoration: none;
+      display: block;
+      width: inherit;
+      height: inherit;
+      font-size: 2.4rem;
+      color: index.$acnt_clr;
+    }
+    .post-save {
+      display: flex;
+      gap: 10px;
       button {
-        text-decoration: none;
-        display: block;
-        width: inherit;
-        height: inherit;
-        font-size: 2.6rem;
-        color: index.$acnt_clr;
+        font-size: 2.4rem;
       }
-      .post-save {
-        display: flex;
-        gap: 10px;
+      p {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 3rem;
+        span {
+          padding-right: 0.4rem;
+        }
+      }
+    }
+    .post-btns {
+      display: flex;
+      gap: 15px;
+      .post-like {
         button {
-          font-size: 3rem;
-        }
-        p {
-          font-size: 1.6rem;
-          font-weight: 600;
-          line-height: 3rem;
-          span {
-            padding-right: 0.4rem;
-          }
-        }
-      }
-      .post-btns {
-        display: flex;
-        gap: 15px;
-        .post-like {
-          button {
-            color: index.$like_clr;
-          }
+          color: index.$like_clr;
         }
       }
     }
