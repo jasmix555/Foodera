@@ -390,7 +390,7 @@ body::-webkit-scrollbar {
   padding-left: 20px;
 }
 
-.shdw, .user-wrapper .user-box, .user-wrapper .user-box .user-prof-small, .start-btn, .bookmark-save-wrapper .save-content .save-inner .save-create, .bookmark-save-wrapper .save-content .save-inner .save-folders .mini-file, .bookmark-save-wrapper .save-content .save-inner .save-folders .mini-file .mini-file-btn button, .navbar-wrapper .upload-wrapper, .navbar-wrapper .prof-pic-wrapper, .header-wrapper, .story-wrapper .story, .post-wrapper .post-header .post-user .post-prof, .post-wrapper .post-button-wrapper, .searchbar-wrapper, .trend-wrapper .trend-prof-wrapper .trend-prof a, .grid .grid-item, .grid .grid-item .recc-post-text .recc-name a, .main-profile-wrapper .profile-content .profile-pic, .user-post-wrapper .user-post-content .post-content .user-prof-content .post-prof a, .user-post-footer .post-button-wrapper #comment, .follow-btn button, .user-wrapper .user-box button, .user-post-wrapper .user-post-content .post-content .user-prof-content button {
+.shdw, .user-wrapper .user-box, .user-wrapper .user-box .user-prof-small, .start-btn, .bookmark-save-wrapper .save-content .save-inner .save-create, .bookmark-save-wrapper .save-content .save-inner .save-folders .mini-file, .bookmark-save-wrapper .save-content .save-inner .save-folders .mini-file .mini-file-btn button, .navbar-wrapper .upload-wrapper, .navbar-wrapper .prof-pic-wrapper, .header-wrapper, .story-wrapper .story, .post-wrapper .post-header .post-user .post-prof, .post-wrapper .post-button-wrapper, .searchbar-wrapper, .trend-wrapper .trend-prof-wrapper .trend-prof a, .grid .grid-item, .grid .grid-item .recc-post-text .recc-name a, .main-profile-wrapper .profile-content .profile-pic, .user-post-wrapper .user-post-content .post-content .user-prof-content .post-prof a, .user-post-footer .post-button-wrapper #comment, .nearby-recc-wrapper .recc-inner-wrapper .recc-inner-content, .follow-btn button, .user-wrapper .user-box button, .user-post-wrapper .user-post-content .post-content .user-prof-content button {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -1435,12 +1435,13 @@ body::-webkit-scrollbar {
   top: 0;
   width: 100%;
   padding: 0.6rem 2rem;
+  display: flex;
+  justify-content: space-between;
 }
 .location-wrapper .location-main {
   display: flex;
   align-items: center;
   font-size: 2rem;
-  padding: 0.2rem 2rem;
   font-weight: 900;
 }
 .location-wrapper .location-main::before {
@@ -1456,6 +1457,10 @@ body::-webkit-scrollbar {
 }
 .location-wrapper .location-main .fa-chevron-down.rotated {
   transform: rotate(180deg);
+}
+.location-wrapper .location-search {
+  font-size: 2rem;
+  font-weight: 900;
 }
 
 .main-profile-wrapper {
@@ -1712,15 +1717,18 @@ body::-webkit-scrollbar {
   height: 100%;
 }
 .nearby-recc-wrapper .recc-header {
-  width: 94%;
-  margin: 0 auto;
+  width: 100%;
+  border: 1px solid #dadada;
 }
 .nearby-recc-wrapper .recc-header ul {
+  padding: 1rem 0;
+  margin: 0 auto;
   display: flex;
-  width: 100%;
+  width: 94%;
   gap: 1.4rem;
   overflow-y: scroll;
   position: relative;
+  align-items: center;
 }
 .nearby-recc-wrapper .recc-header ul::-webkit-scrollbar {
   display: none;
@@ -1732,11 +1740,34 @@ body::-webkit-scrollbar {
 .nearby-recc-wrapper .recc-header ul li button {
   display: block;
   padding: 1rem;
-  height: 35px;
   font-size: 1.4rem;
   line-height: 1.4rem;
   border-radius: 5px;
   white-space: nowrap; /* Prevent text from wrapping */
   background: #f7f8f9;
   border: 1px solid #dadada;
+}
+.nearby-recc-wrapper .recc-inner-wrapper {
+  padding-top: 2rem;
+}
+.nearby-recc-wrapper .recc-inner-wrapper .recc-inner-content {
+  padding: 1rem;
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  height: 16rem;
+  background: #f7f8f9;
+  border-radius: 5px;
+}
+.nearby-recc-wrapper .recc-inner-wrapper .recc-inner-content .recc-prof {
+  display: flex;
+  gap: 1.2rem;
+}
+.nearby-recc-wrapper .recc-inner-wrapper .recc-inner-content .recc-prof .recc-prof-photo {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #dadada;
+  border-radius: 5px;
+  background-position: center;
+  background-size: cover;
 }
