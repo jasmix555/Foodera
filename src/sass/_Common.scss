@@ -163,6 +163,12 @@ body {
   border-radius: 50%;
 }
 
+%pic-frame {
+  background-position: center;
+  background-size: cover;
+  display: block;
+}
+
 %prof-scroll {
   display: -webkit-box;
   flex-wrap: nowrap;

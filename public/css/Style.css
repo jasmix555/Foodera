@@ -390,7 +390,7 @@ body::-webkit-scrollbar {
   padding-left: 20px;
 }
 
-.shdw, .user-wrapper .user-box, .user-wrapper .user-box .user-prof-small, .start-btn, .bookmark-save-wrapper .save-content .save-inner .save-create, .bookmark-save-wrapper .save-content .save-inner .save-folders .mini-file, .bookmark-save-wrapper .save-content .save-inner .save-folders .mini-file .mini-file-btn button, .navbar-wrapper .upload-wrapper, .navbar-wrapper .prof-pic-wrapper, .header-wrapper, .story-wrapper .story, .post-wrapper .post-header .post-user .post-prof, .post-wrapper .post-button-wrapper, .searchbar-wrapper, .trend-wrapper .trend-prof-wrapper .trend-prof a, .grid .grid-item, .grid .grid-item .recc-post-text .recc-name a, .main-profile-wrapper .profile-content .profile-pic, .user-post-wrapper .user-post-content .post-content .user-prof-content .post-prof a, .user-post-footer .post-button-wrapper #comment, .nearby-recc-wrapper .recc-inner-wrapper .recc-inner-content, .follow-btn button, .user-wrapper .user-box button, .user-post-wrapper .user-post-content .post-content .user-prof-content button {
+.shdw, .user-wrapper .user-box, .user-wrapper .user-box .user-prof-small, .start-btn, .bookmark-save-wrapper .save-content .save-inner .save-create, .bookmark-save-wrapper .save-content .save-inner .save-folders .mini-file, .bookmark-save-wrapper .save-content .save-inner .save-folders .mini-file .mini-file-btn button, .navbar-wrapper .upload-wrapper, .navbar-wrapper .prof-pic-wrapper, .header-wrapper, .story-wrapper .story, .post-wrapper .post-header .post-user .post-prof, .post-wrapper .post-button-wrapper, .searchbar-wrapper, .trend-wrapper .trend-prof-wrapper .trend-prof a, .grid .grid-item, .grid .grid-item .recc-post-text .recc-name a, .main-profile-wrapper .profile-content .profile-pic, .user-post-wrapper .user-post-content .post-content .user-prof-content .post-prof a, .user-post-footer .post-button-wrapper #comment, .nearby-recc-wrapper .recc-inner-wrapper .recc-inner-content, .nearby-recc-wrapper .recc-inner-wrapper .recc-inner-content .recc-prof .recc-prof-photo, .follow-btn button, .user-wrapper .user-box button, .user-post-wrapper .user-post-content .post-content .user-prof-content button {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -596,6 +596,12 @@ body::-webkit-scrollbar {
   border-radius: 50%;
 }
 
+.logo, .topics-wrapper .topic-container .topic-box .topics, .share-wrapper .share-content .share-icons-wrapper .icons a, .share-wrapper .share-content .share-icons-wrapper .icons button, .nearby-recc-wrapper .recc-inner-wrapper .recc-inner-content .recc-prof .recc-prof-photo, .nearby-recc-wrapper .recc-inner-wrapper .recc-inner-content .recc-inner-photo-wrapper .recc-photo {
+  background-position: center;
+  background-size: cover;
+  display: block;
+}
+
 .story-wrapper, .trend-wrapper .trend-prof-wrapper {
   display: -webkit-box;
   flex-wrap: nowrap;
@@ -668,8 +674,6 @@ body::-webkit-scrollbar {
   border-radius: 10px;
   margin-top: 184px;
   background-image: url(../../public/img/logo.png);
-  background-size: contain;
-  background-position: center;
 }
 
 .btn-wrapper {
@@ -757,8 +761,6 @@ body::-webkit-scrollbar {
   border-radius: 50%;
   width: 100%;
   height: 100%;
-  background-position: center center;
-  background-size: cover;
 }
 .topics-wrapper .topic-container .topic-box .topics button {
   background: hsla(0, 0%, 0%, 0.3);
@@ -912,8 +914,6 @@ body::-webkit-scrollbar {
   align-items: center;
 }
 .share-wrapper .share-content .share-icons-wrapper .icons a {
-  background-position: center;
-  background-size: contain;
   display: block;
   width: 5rem;
   height: 5rem;
@@ -924,8 +924,6 @@ body::-webkit-scrollbar {
   color: #bdbdbd;
 }
 .share-wrapper .share-content .share-icons-wrapper .icons button {
-  background-position: center;
-  background-size: contain;
   display: block;
   width: 5rem;
   height: 5rem;
@@ -1758,6 +1756,10 @@ body::-webkit-scrollbar {
   height: 16rem;
   background: #f7f8f9;
   border-radius: 5px;
+  flex-direction: column;
+  justify-content: space-around;
+  text-decoration: none;
+  color: #1d1d1f;
 }
 .nearby-recc-wrapper .recc-inner-wrapper .recc-inner-content .recc-prof {
   display: flex;
@@ -1766,8 +1768,26 @@ body::-webkit-scrollbar {
 .nearby-recc-wrapper .recc-inner-wrapper .recc-inner-content .recc-prof .recc-prof-photo {
   width: 50px;
   height: 50px;
-  border: 1px solid #dadada;
+  border: solid 1px #bdbdbd;
   border-radius: 5px;
-  background-position: center;
-  background-size: cover;
+}
+.nearby-recc-wrapper .recc-inner-wrapper .recc-inner-content .recc-inner-photo-wrapper {
+  width: 100%;
+  height: 50%;
+  border-radius: 5px;
+  display: flex;
+}
+.nearby-recc-wrapper .recc-inner-wrapper .recc-inner-content .recc-inner-photo-wrapper .recc-photo {
+  width: 25%;
+  height: 100%;
+  border-bottom: solid 1px #bdbdbd;
+  border-top: solid 1px #bdbdbd;
+  border-right: solid 1px #bdbdbd;
+}
+.nearby-recc-wrapper .recc-inner-wrapper .recc-inner-content .recc-inner-photo-wrapper .recc-photo:first-child {
+  border-radius: 5px 0 0 5px;
+  border-left: solid 1px #bdbdbd;
+}
+.nearby-recc-wrapper .recc-inner-wrapper .recc-inner-content .recc-inner-photo-wrapper .recc-photo:last-child {
+  border-radius: 0 5px 5px 0;
 }
