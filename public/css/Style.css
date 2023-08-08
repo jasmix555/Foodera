@@ -1710,15 +1710,11 @@ body::-webkit-scrollbar {
   color: #f29c8c;
 }
 
-.nearby-recc-wrapper {
-  width: 100%;
-  height: 100%;
-}
-.nearby-recc-wrapper .recc-header {
+.recc-header {
   width: 100%;
   border: 1px solid #dadada;
 }
-.nearby-recc-wrapper .recc-header ul {
+.recc-header ul {
   padding: 1rem 0;
   margin: 0 auto;
   display: flex;
@@ -1728,14 +1724,14 @@ body::-webkit-scrollbar {
   position: relative;
   align-items: center;
 }
-.nearby-recc-wrapper .recc-header ul::-webkit-scrollbar {
+.recc-header ul::-webkit-scrollbar {
   display: none;
 }
-.nearby-recc-wrapper .recc-header ul li {
+.recc-header ul li {
   list-style: none;
   height: 100%;
 }
-.nearby-recc-wrapper .recc-header ul li button {
+.recc-header ul li button {
   display: block;
   padding: 1rem;
   font-size: 1.4rem;
@@ -1744,6 +1740,11 @@ body::-webkit-scrollbar {
   white-space: nowrap; /* Prevent text from wrapping */
   background: #f7f8f9;
   border: 1px solid #dadada;
+}
+
+.nearby-recc-wrapper {
+  width: 100%;
+  height: 100%;
 }
 .nearby-recc-wrapper .recc-inner-wrapper {
   padding-top: 2rem;
