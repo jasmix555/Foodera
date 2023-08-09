@@ -1144,6 +1144,7 @@ body::-webkit-scrollbar {
   height: 100%;
   padding-bottom: 2rem;
   background: #fff;
+  border-bottom: 1px solid #bdbdbd;
 }
 .post-wrapper .post-header {
   height: 4.2rem;
