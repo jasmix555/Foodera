@@ -339,7 +339,7 @@ html {
 
 body {
   width: 390px;
-  padding-bottom: 8.4rem;
+  padding-bottom: 6.8rem;
 }
 
 html::-webkit-scrollbar,
@@ -1748,12 +1748,12 @@ body::-webkit-scrollbar {
   height: 100%;
 }
 .nearby-recc-wrapper .recc-inner-wrapper {
-  padding-top: 2rem;
+  padding: 1rem 0;
 }
 .nearby-recc-wrapper .recc-inner-wrapper .recc-inner-content {
   padding: 1rem;
   display: flex;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   height: 16rem;
   background: #f7f8f9;
