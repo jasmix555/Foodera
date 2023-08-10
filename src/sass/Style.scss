@@ -1187,6 +1187,13 @@
           @extend %pic-frame;
           @extend .shdw;
         }
+        .recc-text {
+          font-weight: 600;
+          font-size: 1rem;
+          span {
+            color: index.$sub_gray;
+          }
+        }
       }
 
       .recc-inner-photo-wrapper {
