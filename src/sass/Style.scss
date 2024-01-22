@@ -8,7 +8,7 @@
   left: calc(50% - 200px / 2);
   border-radius: 10px;
   margin-top: 184px;
-  background-image: url(../../public/img/logo.png);
+  background-image: url(/public/img/logo.png);
   @extend %pic-frame;
 }
 

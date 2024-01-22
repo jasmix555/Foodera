@@ -673,7 +673,7 @@ body::-webkit-scrollbar {
   left: calc(50% - 100px);
   border-radius: 10px;
   margin-top: 184px;
-  background-image: url(../../public/img/logo.png);
+  background-image: url(/public/img/logo.png);
 }
 
 .btn-wrapper {
