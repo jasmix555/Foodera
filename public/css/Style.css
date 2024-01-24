@@ -582,7 +582,7 @@ body::-webkit-scrollbar {
 }
 
 .navbar-wrapper .prof-pic-wrapper a, .main-profile-wrapper .profile-content .profile-pic button {
-  background: url(../../public/img/people/0.jpeg) center center/contain;
+  background: url(/img/people/0.jpeg) center center/contain;
   width: 100%;
   height: 100%;
   display: block;
