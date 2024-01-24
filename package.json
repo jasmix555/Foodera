@@ -14,7 +14,7 @@
   "browserslist": [
     ">1.0% in JP",
     "ie 11"
-],
+  ],
   "devDependencies": {
     "gulp-autoprefixer": "^8.0.0",
     "gulp-notify": "^4.0.0",
