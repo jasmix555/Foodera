@@ -759,9 +759,9 @@
 }
 
 .grid {
-  margin: 0 1rem;
+  column-count: 2;
+  width: 100%;
   .grid-item {
-    width: 48%;
     padding: 0.3rem;
     background: index.$recc_bg;
     border: 2px solid index.$recc_brdr;

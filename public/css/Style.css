@@ -1372,10 +1372,10 @@ body::-webkit-scrollbar {
 }
 
 .grid {
-  margin: 0 1rem;
+  column-count: 2;
+  width: 100%;
 }
 .grid .grid-item {
-  width: 48%;
   padding: 0.3rem;
   background: #f7f8f9;
   border: 2px solid #c1c8d6;
